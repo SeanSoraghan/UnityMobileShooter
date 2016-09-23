@@ -36,6 +36,11 @@ public class CanvasTouchHandler : MonoBehaviour
 
 public class CanvasTouchManager : CanvasTouchHandler
 {
+    public static bool IsTagValidTarget (string tag)
+    {
+        return tag == "Enemy";
+    }
+
     public GameObject[] CanvasObjects;
     public GameObject   PlayerObject;
 
@@ -151,13 +156,21 @@ public class CanvasTouchManager : CanvasTouchHandler
 
     private void UpdatePlayerTargetFromScreenPosition (Vector2 screenPosition)
     {
+        PlayerController controller = PlayerObject.GetComponent<PlayerController>();
         Ray ray = Camera.main.ScreenPointToRay (screenPosition);
         if (Physics.Raycast (ray, out raycastResult))
         {
-            PlayerController controller = PlayerObject.GetComponent<PlayerController>();
-            if (controller != null)
-                controller.UpdatePlayerTargetPosition (raycastResult.point);
+            if (IsTagValidTarget (raycastResult.collider.gameObject.tag))
+            { 
+                if (controller != null)
+                { 
+                    controller.UpdatePlayerTargetPosition (raycastResult.collider.gameObject.GetComponentInChildren<Transform>().position);
+                    return;
+                }
+            }
         }
+        if (controller != null)
+            controller.ClearTargetPosition();
     }
 
     private bool IsScreenPositionInChildBounds (GameObject childElement, Vector2 touchScreenPosition)
@@ -169,6 +182,8 @@ public class CanvasTouchManager : CanvasTouchHandler
         if (childRectTrasform == null)
             return false;
 
-        return childRectTrasform.rect.Contains (touchScreenPosition);
+        Vector2 p = childRectTrasform.anchoredPosition;
+        Rect rect = new Rect (p.x, p.y, childRectTrasform.sizeDelta.x, childRectTrasform.sizeDelta.y);
+        return rect.Contains (touchScreenPosition);
     }
 }

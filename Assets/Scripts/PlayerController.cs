@@ -16,27 +16,30 @@ public struct PlayerTarget
 //================================================================================================
 //================================================================================================
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : ActorController
 {
-    public float               movementSpeed = 1.0f;
-    public GameObject          joystick;
-    private JoystickController joystickController;
+    public float                movementSpeed = 1.0f;
+    public GameObject           joystick;
+    public GameObject           Gunshot;
 
+    private JoystickController  joystickController;
     private Vector3             movementVector  = Vector3.zero;
     private Quaternion          LookRotation    = new Quaternion();
-    private Rigidbody           rigidBody;
     private CharacterController controller;
     private PlayerTarget        target          = new PlayerTarget (Vector3.zero, false);
+    private RaycastHit          shootRaycastResult;
+    private float               shotDamage = 10.0f;
 
 	void Start ()
     {
-	    rigidBody          = GetComponent<Rigidbody>();
         controller         = GetComponent<CharacterController>();
         joystickController = joystick.GetComponent<JoystickController>();
 	}
 
 	void Update ()
-    {}
+    {
+
+    }
 
     void FixedUpdate ()
     {
@@ -74,6 +77,35 @@ public class PlayerController : MonoBehaviour
         else if (movementVector.magnitude > 0.1f)
         {
             LookRotation = Quaternion.LookRotation(movementVector);
+        }
+    }
+
+    public void Shoot()
+    {
+        if (target.IsValidTarget)
+        { 
+            Vector3 shootRayOrigin = transform.position;
+            shootRayOrigin.y = shootRayOrigin.y + transform.localScale.y / 2;
+            Vector3 shootRayDirection = (target.TargetLocation - shootRayOrigin).normalized;
+            if (Physics.Raycast (shootRayOrigin, shootRayDirection, out shootRaycastResult))
+            {
+                Vector3 debugRayLength = shootRaycastResult.point - shootRayOrigin;
+                Debug.DrawRay (shootRayOrigin, debugRayLength, new Color (1.0f, 0.0f, 0.0f), 0.2f, true);
+
+                
+                if (Gunshot != null)
+                { 
+                    Object gunshot = Instantiate (Gunshot, shootRayOrigin, transform.rotation);
+                    GameObject gunshotObject = (GameObject) gunshot;
+                    gunshotObject.GetComponent<ParticleSystem>().Play();
+                    Destroy (gunshotObject, gunshotObject.GetComponent<ParticleSystem>().duration + 0.5f);
+                }
+
+                GameObject objectHit = shootRaycastResult.collider.gameObject;
+                ActorController actor = objectHit.GetComponent<ActorController>();
+                if (actor != null)
+                    actor.TakeHit (shootRaycastResult.point, shotDamage);
+            }
         }
     }
 
