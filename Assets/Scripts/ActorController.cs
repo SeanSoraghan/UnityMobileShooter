@@ -1,11 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//namespace AnimatorParamNames
-//{
-//    string TwoHandedAiming = "TwoHandedAiming";
-//}
-
 public class ActorController : MonoBehaviour
 {
     public float      StartHealth     = 100.0f;
