@@ -3,11 +3,15 @@ using System.Collections;
 
 public class CameraFollow : MonoBehaviour
 {
-    public GameObject PlayerObject;
-    public float heightAbovePlayer = 10.0f;
+    public Transform PlayerTransform;
+
+    private Vector3 Offset = Vector3.zero;
 
 	void Start ()
-    {}
+    {
+        if (PlayerTransform != null)
+            Offset = transform.position - PlayerTransform.position;
+    }
 	
 	void Update ()
     {
@@ -16,7 +20,6 @@ public class CameraFollow : MonoBehaviour
 
     private void UpdateCameraPosition()
     {
-        Transform playerTransform = PlayerObject.transform;
-        transform.position = playerTransform.position + new Vector3(0.0f, heightAbovePlayer, 0.0f);
+        transform.position = PlayerTransform.position + Offset;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 enum MouseEventType
@@ -47,7 +48,8 @@ public class CanvasTouchManager : CanvasTouchHandler
     private RaycastHit raycastResult;
 
     void Start ()
-    {}
+    {
+    }
 	
 	void Update ()
     {

@@ -15,7 +15,10 @@ public class ShootButtonController : CanvasTouchHandler
 	    buttonImage = GetComponent<Image>();
 
         float rectSize = Screen.width * screenWidthToControlWidthRatio;
-        GetComponent<RectTransform>().sizeDelta = new Vector2 (rectSize, rectSize);
+        float y = GetComponent<RectTransform>().anchoredPosition.y;
+        float x = Screen.width - rectSize;
+        GetComponent<RectTransform>().anchoredPosition = new Vector2 (x, y);
+        GetComponent<RectTransform>().sizeDelta        = new Vector2 (rectSize, rectSize);
 
         if (PlayerObject != null)
             Player = PlayerObject.GetComponent<PlayerController>();
