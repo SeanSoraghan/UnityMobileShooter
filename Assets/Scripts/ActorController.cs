@@ -11,7 +11,6 @@ public class ActorController : MonoBehaviour
     public GameObject ShotImpact;
     public GameObject Gun;
 
-    private RaycastHit shootRaycastResult;
     private float      Health;
     private float      HealthPercentage;
 
@@ -72,5 +71,16 @@ public class ActorController : MonoBehaviour
         if (Health > MaxHealth)
             Health = MaxHealth;
         UpdateHealthPercentage();
+    }
+
+    public void PickUpGun (GameObject newGunObject)
+    {
+        Destroy (Gun);
+        Gun = (GameObject) Instantiate (newGunObject, newGunObject.transform.position, newGunObject.transform.rotation);
+
+        if (Gun != null)
+            GunComponent = Gun.GetComponent<GunController>();
+        
+        Destroy (newGunObject);
     }
 }

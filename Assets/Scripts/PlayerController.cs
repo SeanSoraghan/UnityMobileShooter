@@ -20,6 +20,7 @@ public class PlayerController : ActorController
 {
     
     public GameObject           Joystick;
+    public Transform            WeaponSlot;
     public float                MaxAnimationSpeed = 1.0f;
     public string               AnimatorAimingParamString = "Aiming";
 
@@ -146,5 +147,21 @@ public class PlayerController : ActorController
     private void SetAnimatorAiming (bool aiming)
     {
         AnimationController.SetBool (AnimatorAimingParamString, aiming);
+    }
+
+    void OnControllerColliderHit (ControllerColliderHit col)
+    {
+        if (col.gameObject.tag == GunController.GunTag)
+        {
+            Debug.Log ("Gun pick up"); 
+            PickUpGun (col.gameObject);
+            if (Gun != null && WeaponSlot != null)
+            { 
+                Gun.transform.SetParent (WeaponSlot.transform);
+                Gun.transform.localPosition = Vector3.zero;
+                Gun.transform.localRotation = Quaternion.Euler (-90.0f, 0.0f, 0.0f);
+                Gun.transform.localScale    = new Vector3 (0.001f, 0.001f, 0.001f);
+            }
+        }
     }
 }

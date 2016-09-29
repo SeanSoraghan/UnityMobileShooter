@@ -8,6 +8,8 @@ public class GunController : MonoBehaviour
     public GameObject GunshotEffect;
     public Transform  GunEnd;
 
+    public static string GunTag = "Gun";
+
     private float      LastShotTime        = 0.0f;
     private float      SecondsBetweenShots = 1.0f;
     private RaycastHit shootRaycastResult;

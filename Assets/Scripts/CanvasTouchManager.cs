@@ -39,7 +39,7 @@ public class CanvasTouchManager : CanvasTouchHandler
 {
     public static bool IsTagValidTarget (string tag)
     {
-        return tag == "Enemy";
+        return tag == EnemyController.EnemyTag;
     }
 
     public GameObject[] CanvasObjects;

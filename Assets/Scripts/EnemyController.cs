@@ -8,9 +8,10 @@ public class EnemyController : ActorController
     public float     Damping         = 0.9f;
     public Transform PlayerTransform;
 
+    public static string EnemyTag = "Enemy";
+
     private CharacterController Controller;
     private float               PlayerTargetDistance;
-    private RaycastHit          ShootRaycastResult;
     
 
 	void Start ()
@@ -47,7 +48,6 @@ public class EnemyController : ActorController
 
     public void Shoot()
     {
-        Vector3 lookVector = transform.forward.normalized;
-        Shoot (lookVector);
+        Shoot (PlayerTransform.position + new Vector3 (0.0f, PlayerTransform.localScale.y, 0.0f));
     }
 }
