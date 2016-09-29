@@ -158,21 +158,24 @@ public class CanvasTouchManager : CanvasTouchHandler
 
     private void UpdatePlayerTargetFromScreenPosition (Vector2 screenPosition)
     {
-        PlayerController controller = PlayerObject.GetComponent<PlayerController>();
-        Ray ray = Camera.main.ScreenPointToRay (screenPosition);
-        if (Physics.Raycast (ray, out raycastResult))
-        {
-            if (IsTagValidTarget (raycastResult.collider.gameObject.tag))
-            { 
-                if (controller != null)
+        if (PlayerObject != null)
+        { 
+            PlayerController controller = PlayerObject.GetComponent<PlayerController>();
+            Ray ray = Camera.main.ScreenPointToRay (screenPosition);
+            if (Physics.Raycast (ray, out raycastResult))
+            {
+                if (IsTagValidTarget (raycastResult.collider.gameObject.tag))
                 { 
-                    controller.UpdatePlayerTargetPosition (raycastResult.collider.gameObject.GetComponentInChildren<Transform>().position);
-                    return;
+                    if (controller != null)
+                    { 
+                        controller.UpdatePlayerTargetPosition (raycastResult.collider.gameObject);
+                        return;
+                    }
                 }
             }
+            if (controller != null)
+                controller.ClearTargetPosition();
         }
-        if (controller != null)
-            controller.ClearTargetPosition();
     }
 
     private bool IsScreenPositionInChildBounds (GameObject childElement, Vector2 touchScreenPosition)

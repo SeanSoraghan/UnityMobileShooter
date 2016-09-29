@@ -20,6 +20,7 @@ public class CameraFollow : MonoBehaviour
 
     private void UpdateCameraPosition()
     {
-        transform.position = PlayerTransform.position + Offset;
+        if (PlayerTransform != null)
+            transform.position = PlayerTransform.position + Offset;
     }
 }

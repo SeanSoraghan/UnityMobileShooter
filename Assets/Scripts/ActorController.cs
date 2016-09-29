@@ -40,6 +40,8 @@ public class ActorController : MonoBehaviour
     {
         if (GunComponent != null)
             GunComponent.Shoot (targetLocation);
+        else
+            Debug.Log("null");
     }
 
     public void TakeHit (Vector3 hitLocation, float damage)
@@ -82,5 +84,10 @@ public class ActorController : MonoBehaviour
             GunComponent = Gun.GetComponent<GunController>();
         
         Destroy (newGunObject);
+    }
+
+    public virtual Vector3 GetTargetLocation()
+    {
+        return transform.position + new Vector3 (0.0f, transform.localScale.y * 0.5f);
     }
 }

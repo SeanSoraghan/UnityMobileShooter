@@ -3,14 +3,27 @@ using System.Collections;
 
 public struct PlayerTarget
 { 
-    public PlayerTarget (Vector3 t, bool v)
+    public PlayerTarget (GameObject t)
     {
-        TargetLocation = t;
-        IsValidTarget  = v;
+        TargetObject  = t;
     }
 
-    public Vector3 TargetLocation;
-    public bool    IsValidTarget;
+    public Vector3 GetTargetLocation()
+    {
+        ActorController actor = TargetObject.GetComponent<ActorController>();
+
+        if (actor != null)
+            return actor.GetTargetLocation();
+
+        return Vector3.zero;
+    }
+
+    public bool    IsTargetValid()
+    {
+        return TargetObject != null;
+    }
+
+    public GameObject TargetObject;
 }
 
 //================================================================================================
@@ -22,12 +35,15 @@ public class PlayerController : ActorController
     public GameObject           Joystick;
     public Transform            WeaponSlot;
     public float                MaxAnimationSpeed = 1.0f;
-    public string               AnimatorAimingParamString = "Aiming";
+
+    public static string        PlayerTag                   = "Player";
+    public static string        AnimatorAimingParamString   = "Aiming";
+    public static string        AnimatorCarryingParamString = "Carrying";
 
     private JoystickController  JoystickController;
     private Animator            AnimationController;
     private CharacterController Controller;
-    private PlayerTarget        Target                    = new PlayerTarget (Vector3.zero, false);
+    private PlayerTarget        Target                    = new PlayerTarget (null);
     private string              LookMovementRotationDelta = "LookMovementRotationDelta";
     private string              VelocityMagnitude         = "VelocityMagnitude";
     private Quaternion          DefaultArmRotation        = Quaternion.identity;
@@ -43,6 +59,8 @@ public class PlayerController : ActorController
     void Update()
     {
         UpdateActor();
+        if (Input.GetKeyDown ("space"))
+            Shoot();
     }
 
     void FixedUpdate ()
@@ -67,20 +85,20 @@ public class PlayerController : ActorController
         if (MovementVector.magnitude > 1.0f)
             MovementVector = MovementVector.normalized;
 
-        Controller.SimpleMove (MovementVector * MovementSpeed * Time.deltaTime);
+        Controller.SimpleMove (MovementVector * MovementSpeed);
         if (AnimationController != null) 
             AnimationController.SetFloat (VelocityMagnitude, MovementVector.magnitude);
     }
 
     void UpdateLookRotation()
     {
-        if (Target.IsValidTarget)
+        if (Target.IsTargetValid())
         {
-            Vector3 lookVector = Target.TargetLocation - transform.position;
+            Vector3 lookVector = Target.GetTargetLocation() - transform.position;
             lookVector.y = transform.position.y;
             lookVector = lookVector.normalized;
             LookRotation = Quaternion.LookRotation (lookVector);
-            AnimationController.SetLookAtPosition (Target.TargetLocation);
+            AnimationController.SetLookAtPosition (Target.GetTargetLocation());
         }
         else if (MovementVector.magnitude > 0.1f)
         {
@@ -128,25 +146,45 @@ public class PlayerController : ActorController
 
     public void Shoot ()
     {
-        if (Target.IsValidTarget)
-            Shoot (Target.TargetLocation);
+        if (Target.IsTargetValid())
+            Shoot (Target.GetTargetLocation());
+
+        UpdateAnimationParameters();
     }
 
-    public void UpdatePlayerTargetPosition (Vector3 targetPosition)
+    public void UpdatePlayerTargetPosition (GameObject targetObject)
     {
-        Target = new PlayerTarget (targetPosition, true);
-        SetAnimatorAiming (true);
+        Target = new PlayerTarget (targetObject);
+        UpdateAnimationParameters();
     }
 
     public void ClearTargetPosition()
     {
-        Target = new PlayerTarget (Vector3.zero, false);
-        SetAnimatorAiming (false);
+        Target = new PlayerTarget (null);
+        UpdateAnimationParameters();
+    }
+
+    private void UpdateAnimationParameters()
+    {
+        SetAnimatorAiming   (false);
+        SetAnimatorCarrying (false);
+        if (Gun != null)
+        {
+            if (Target.IsTargetValid())
+                SetAnimatorAiming (true);
+            else
+                SetAnimatorCarrying (true);
+        }
     }
 
     private void SetAnimatorAiming (bool aiming)
     {
         AnimationController.SetBool (AnimatorAimingParamString, aiming);
+    }
+
+    private void SetAnimatorCarrying (bool carrying)
+    {
+        AnimationController.SetBool (AnimatorCarryingParamString, carrying);
     }
 
     void OnControllerColliderHit (ControllerColliderHit col)
@@ -162,6 +200,8 @@ public class PlayerController : ActorController
                 Gun.transform.localRotation = Quaternion.Euler (-90.0f, 0.0f, 0.0f);
                 Gun.transform.localScale    = new Vector3 (0.001f, 0.001f, 0.001f);
             }
+
+            UpdateAnimationParameters();
         }
     }
 }

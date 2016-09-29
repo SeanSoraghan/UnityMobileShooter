@@ -3,29 +3,30 @@ using System.Collections;
 
 public class EnemyController : ActorController
 {
-    public float     SightDistance   = 100.0f;
-    public float     AttackDistance  = 50.0f;
-    public float     Damping         = 0.9f;
-    public Transform PlayerTransform;
+    public float      SightDistance   = 100.0f;
+    public float      AttackDistance  = 50.0f;
+    public float      Damping         = 0.9f;
+    public GameObject PlayerObject;
 
     public static string EnemyTag = "Enemy";
 
     private CharacterController Controller;
     private float               PlayerTargetDistance;
-    
+    private ActorController     PlayerActorController;
 
 	void Start ()
     {
         Initialise();
         Controller = GetComponent<CharacterController>();
-
+        if (PlayerObject != null)
+            PlayerActorController = PlayerObject.GetComponent<ActorController>();
 	}
 	
 	void FixedUpdate ()
     {
-        if (PlayerTransform != null)
+        if (PlayerActorController != null)
         { 
-	        PlayerTargetDistance = Vector3.Distance (PlayerTransform.position, transform.position);
+	        PlayerTargetDistance = Vector3.Distance (PlayerActorController.GetTargetLocation(), transform.position);
             if (PlayerTargetDistance < SightDistance)
             {
                 UpdateLookRotation();
@@ -38,9 +39,9 @@ public class EnemyController : ActorController
 
     void UpdateLookRotation()
     {
-        if (PlayerTransform != null)
+        if (PlayerActorController != null)
         {
-            Vector3 LookVector = PlayerTransform.position - transform.position;
+            Vector3 LookVector = PlayerActorController.GetTargetLocation() - transform.position;
             LookVector.y = 0.0f;
             LookRotation = Quaternion.LookRotation (LookVector);
         }
@@ -48,6 +49,6 @@ public class EnemyController : ActorController
 
     public void Shoot()
     {
-        Shoot (PlayerTransform.position + new Vector3 (0.0f, PlayerTransform.localScale.y, 0.0f));
+        Shoot (PlayerActorController.GetTargetLocation());
     }
 }
