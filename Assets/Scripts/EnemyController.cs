@@ -24,6 +24,8 @@ public class EnemyController : ActorController
 	
 	void FixedUpdate ()
     {
+        ActorFixedUpdate();
+
         if (PlayerActorController != null)
         { 
 	        PlayerTargetDistance = Vector3.Distance (PlayerActorController.GetTargetLocation(), transform.position);

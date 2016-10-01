@@ -3,13 +3,17 @@ using System.Collections;
 
 public class ActorController : MonoBehaviour
 {
-    public float      StartHealth     = 100.0f;
-    public float      MaxHealth       = 100.0f;
-    public float      MovementSpeed   = 1000.0f;
-    public Vector3    MovementVector  = Vector3.zero;
-    public Quaternion LookRotation    = new Quaternion();
+    public float      StartHealth           = 100.0f;
+    public float      MaxHealth             = 100.0f;
+    public float      MovementSpeed         = 1000.0f;
+    public Vector3    MovementVector        = Vector3.zero;
+    public Vector3    StaggerMovementVector = Vector3.zero;
+    public Quaternion LookRotation          = new Quaternion();
     public GameObject ShotImpact;
     public GameObject Gun;
+    public Transform  TargetPosition;
+    public bool       IsAlive               = true;
+    public float      StaggerResistance     = 5.0f;
 
     private float      Health;
     private float      HealthPercentage;
@@ -27,9 +31,23 @@ public class ActorController : MonoBehaviour
             GunComponent = Gun.GetComponent<GunController>();
 	}
 	
-    public void CheckDeath()  { if (HealthPercentage <= 0.0f) Object.Destroy (gameObject); }
+    public void CheckDeath()
+    {
+        if (HealthPercentage <= 0.0f)
+        {
+            IsAlive = false;
+            Destroy (gameObject);
+        }
+    }
+
     public void UpdateActor() { Update(); }
 	void Update ()            { CheckDeath(); }
+
+    public void ActorFixedUpdate() { FixedUpdate(); }
+    void FixedUpdate()
+    {
+        StaggerMovementVector = Vector3.Lerp (StaggerMovementVector, Vector3.zero, Time.deltaTime * (1.0f + StaggerResistance));
+    }
 
     private void UpdateHealthPercentage()
     {
@@ -44,17 +62,21 @@ public class ActorController : MonoBehaviour
             Debug.Log("null");
     }
 
-    public void TakeHit (Vector3 hitLocation, float damage)
+    public virtual void TakeHit (Vector3 hitLocation, float damage, BulletInfo bulletInfo)
     {
         ShowShotImpact (hitLocation);
-        TakeDamage (damage);
+        TakeDamage (damage * bulletInfo.DamageMultiplier);
+        TakeImpact (bulletInfo);
     }
 
-    private void TakeDamage (float damage)
+    public virtual void TakeDamage (float damage)
     {
         Health -= damage;
         UpdateHealthPercentage();
+        CheckDeath();
     }
+
+    public virtual void TakeImpact (BulletInfo bulletInfo) { StaggerMovementVector += bulletInfo.Velocity; }
 
     private void ShowShotImpact (Vector3 position)
     {
@@ -88,6 +110,9 @@ public class ActorController : MonoBehaviour
 
     public virtual Vector3 GetTargetLocation()
     {
+        if (TargetPosition != null)
+            return TargetPosition.position;
+
         return transform.position + new Vector3 (0.0f, transform.localScale.y * 0.5f);
     }
 }

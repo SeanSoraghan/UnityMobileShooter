@@ -1,6 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public struct BulletInfo
+{
+    public BulletInfo (Vector3 velocty, float damageMultiplier)
+    {
+        Velocity = velocty;
+        DamageMultiplier = damageMultiplier;
+    }
+
+    public Vector3 Velocity;
+    public float   DamageMultiplier;
+}
+
 public class GunController : MonoBehaviour
 {
     public float      ShotDamage      = 10.0f;
@@ -39,6 +51,10 @@ public class GunController : MonoBehaviour
                 { 
                     Object gunshot = Instantiate (GunshotEffect, shootRayOrigin, transform.rotation);
                     GameObject gunshotObject = (GameObject) gunshot;
+                    gunshotObject.transform.parent        = GunEnd;
+                    gunshotObject.transform.localRotation = Quaternion.identity;
+                    gunshotObject.transform.localPosition = Vector3.zero;
+                    gunshotObject.transform.localScale    = Vector3.one;
                     gunshotObject.GetComponent<ParticleSystem>().Play();
                     Destroy (gunshotObject, gunshotObject.GetComponent<ParticleSystem>().duration + 0.5f);
                 }
@@ -46,7 +62,7 @@ public class GunController : MonoBehaviour
                 GameObject objectHit = shootRaycastResult.collider.gameObject;
                 ActorController actor = objectHit.GetComponent<ActorController>();
                 if (actor != null)
-                    actor.TakeHit (shootRaycastResult.point, ShotDamage);
+                    actor.TakeHit (shootRaycastResult.point, ShotDamage, new BulletInfo (shootRayDirection, 1.0f));
             }
             LastShotTime = Time.time;
         }

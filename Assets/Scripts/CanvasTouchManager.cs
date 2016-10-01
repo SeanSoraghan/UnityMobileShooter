@@ -30,6 +30,8 @@ public class CanvasTouchHandler : MonoBehaviour
     public virtual void HandleMouseDownEvent (Vector2 mousePosition) { }
     public virtual void HandleMouseDragEvent (Vector2 mousePosition) { }
     public virtual void HandleMouseUpEvent   (Vector2 mousePosition) { }
+
+    public bool HasMouseDown;
 }
 
 //================================================================================================
@@ -68,19 +70,16 @@ public class CanvasTouchManager : CanvasTouchHandler
         bool eventHandled = false;
         for (int c = 0; c < CanvasObjects.Length; c++)
         {
-            if (IsScreenPositionInChildBounds (CanvasObjects[c], Input.mousePosition))
+            CanvasTouchHandler handler = CanvasObjects[c].GetComponent<CanvasTouchHandler>();
+            if (handler != null && (IsScreenPositionInChildBounds (CanvasObjects[c], Input.mousePosition) || handler.HasMouseDown))
             {
-                CanvasTouchHandler handler = CanvasObjects[c].GetComponent<CanvasTouchHandler>();
-                if (handler != null)
+                switch (eventType)
                 {
-                    switch (eventType)
-                    {
-                        case MouseEventType.MouseDown: handler.HandleMouseDownEvent (Input.mousePosition); break;
-                        case MouseEventType.MouseDrag: handler.HandleMouseDragEvent (Input.mousePosition); break;
-                        case MouseEventType.MouseUp:   handler.HandleMouseUpEvent   (Input.mousePosition); break;
-                    }
-                    eventHandled = true; 
+                    case MouseEventType.MouseDown: handler.HandleMouseDownEvent (Input.mousePosition); break;
+                    case MouseEventType.MouseDrag: handler.HandleMouseDragEvent (Input.mousePosition); break;
+                    case MouseEventType.MouseUp:   handler.HandleMouseUpEvent   (Input.mousePosition); break;
                 }
+                eventHandled = true; 
                 break;
             }
         }
@@ -103,39 +102,14 @@ public class CanvasTouchManager : CanvasTouchHandler
         for (int t = 0; t < Input.touchCount; t++)
         {
             Touch touch = Input.touches[t];
-            if (touch.phase == TouchPhase.Began || touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
-            { 
-                bool touchHandled = ForwardNewOrExistingTouchToChildren (touch);
-                if ( ! touchHandled)
-                    HandleNewOrExistingTouch (touch);
-            }
-            else
-            {
-                bool touchHandled = ForwardTouchEndedToChildren (touch);
-                if (! touchHandled)
-                    HandleTouchEnded (touch);
-            }
+            bool isNewOrExistingTouch = (touch.phase == TouchPhase.Began || touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary);
+            bool touchHandled = ForwardTouchToChildren (touch, isNewOrExistingTouch);
+            if ( ! touchHandled)
+                HandleTouch (touch, isNewOrExistingTouch);
         }
     }
 
-    private bool ForwardNewOrExistingTouchToChildren (Touch touch)
-    {
-        for (int c = 0; c < CanvasObjects.Length; c++)
-        { 
-            if (IsScreenPositionInChildBounds (CanvasObjects[c], touch.position))
-            { 
-                CanvasTouchHandler handler = CanvasObjects[c].GetComponent<CanvasTouchHandler>();
-                if (handler != null)
-                { 
-                    handler.HandleNewOrExistingTouch (touch);
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    private bool ForwardTouchEndedToChildren (Touch touch)
+    private bool ForwardTouchToChildren (Touch touch, bool isNewOrExistingTouch)
     {
         for (int c = 0; c < CanvasObjects.Length; c++)
         {
@@ -143,13 +117,24 @@ public class CanvasTouchManager : CanvasTouchHandler
             bool touchInChild = IsScreenPositionInChildBounds (CanvasObjects[c], touch.position);
             if (handler != null && (handler.touchID == touch.fingerId || (handler.touchID == -1 && touchInChild)))
             {
-                handler.HandleTouchEnded (touch);
+                if (isNewOrExistingTouch)
+                    handler.HandleNewOrExistingTouch (touch);
+                else
+                    handler.HandleTouchEnded (touch);
                 return true;
             }
         }
         return false;
     }
     
+    public void HandleTouch (Touch t, bool isNewOrExistingTouch)
+    {
+        if(isNewOrExistingTouch)
+            HandleNewOrExistingTouch (t);
+        else
+            HandleTouchEnded (t);
+    }
+
     public override void HandleNewOrExistingTouch (Touch t)
     {
         base.HandleNewOrExistingTouch (t);

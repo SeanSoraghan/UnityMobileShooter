@@ -18,7 +18,7 @@ public struct PlayerTarget
         return Vector3.zero;
     }
 
-    public bool    IsTargetValid()
+    public bool IsTargetValid()
     {
         return TargetObject != null;
     }
@@ -34,8 +34,8 @@ public class PlayerController : ActorController
     
     public GameObject           Joystick;
     public Transform            WeaponSlot;
-    public float                MaxAnimationSpeed = 1.0f;
-
+    public float                MaxAnimationSpeed           = 1.0f;
+    
     public static string        PlayerTag                   = "Player";
     public static string        AnimatorAimingParamString   = "Aiming";
     public static string        AnimatorCarryingParamString = "Carrying";
@@ -65,6 +65,8 @@ public class PlayerController : ActorController
 
     void FixedUpdate ()
     {
+        ActorFixedUpdate();
+
 	    MovementVector.x = Input.GetAxis ("Horizontal");
         MovementVector.z = Input.GetAxis ("Vertical");
 
@@ -77,7 +79,7 @@ public class PlayerController : ActorController
         MovementInputUpdated();
         UpdateLookRotation();
         transform.rotation = LookRotation;
-        UpdateAnimatorRotationDelta();
+        UpdateAnimatorRotationDelta(); 
 	}
 
     void MovementInputUpdated()
@@ -85,7 +87,7 @@ public class PlayerController : ActorController
         if (MovementVector.magnitude > 1.0f)
             MovementVector = MovementVector.normalized;
 
-        Controller.SimpleMove (MovementVector * MovementSpeed);
+        Controller.SimpleMove ((MovementVector + StaggerMovementVector) * MovementSpeed);
         if (AnimationController != null) 
             AnimationController.SetFloat (VelocityMagnitude, MovementVector.magnitude);
     }
@@ -116,14 +118,14 @@ public class PlayerController : ActorController
 
         //Hack around non OR conditionals in animator controller
         //instead of x > 0.75f || x < -0.75f, we just convert when x < -0.75, so that we cover the range 0.75 -> 1.25.
-        if (rotationDelta < -0.75f)
-            rotationDelta += 2.0f;
+        //if (rotationDelta < -0.75f)
+        //    rotationDelta += 2.0f;
 
         AnimationController.SetFloat (LookMovementRotationDelta, rotationDelta);
-        float animationSpeed = MovementVector.magnitude * MaxAnimationSpeed;
-        if (animationSpeed == 0.0f)
-            animationSpeed = 1.0f; //idle animation.
-        AnimationController.speed = animationSpeed;
+        //float animationSpeed = MovementVector.magnitude * MaxAnimationSpeed;
+        //if (animationSpeed == 0.0f)
+        //    animationSpeed = 1.0f; //idle animation.
+        //AnimationController.speed = animationSpeed;
     }
 
     public static float NormaliseAngle (float angle)
@@ -147,7 +149,10 @@ public class PlayerController : ActorController
     public void Shoot ()
     {
         if (Target.IsTargetValid())
-            Shoot (Target.GetTargetLocation());
+        {
+            Vector3 targetLocation    = Target.GetTargetLocation();
+            Shoot (targetLocation);
+        }
 
         UpdateAnimationParameters();
     }
@@ -168,9 +173,18 @@ public class PlayerController : ActorController
     {
         SetAnimatorAiming   (false);
         SetAnimatorCarrying (false);
+
+        bool TargetValid = Target.IsTargetValid ();
+        if (TargetValid)
+        { 
+            ActorController actor = Target.TargetObject.GetComponent<ActorController> ();
+            if (actor != null)
+                TargetValid = actor.IsAlive;
+        }
+
         if (Gun != null)
         {
-            if (Target.IsTargetValid())
+            if (TargetValid)
                 SetAnimatorAiming (true);
             else
                 SetAnimatorCarrying (true);

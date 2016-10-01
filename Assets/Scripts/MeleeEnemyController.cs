@@ -30,18 +30,24 @@ public class MeleeEnemyController : ActorController
 	
 	void FixedUpdate ()
     {
+        ActorFixedUpdate();
+
         if (PlayerActorController != null)
         { 
 	        PlayerTargetDistance = Vector3.Distance (PlayerActorController.GetTargetLocation(), transform.position);
-            if (Controller != null && PlayerTargetDistance < FollowDistance)
-            {
-                UpdateLookRotation();
-                transform.rotation = LookRotation;
-                Vector3 playerTargetPoint = PlayerActorController.GetTargetLocation();
-                MovementVector = (playerTargetPoint - transform.position).normalized;
+            if (Controller != null)
+            { 
+                MovementVector = Vector3.zero;
+                if (PlayerTargetDistance < FollowDistance)
+                {
+                    UpdateLookRotation();
+                    transform.rotation = LookRotation;
+                    Vector3 playerTargetPoint = PlayerActorController.GetTargetLocation();
+                    MovementVector = (playerTargetPoint - transform.position).normalized; 
+                }
                 float yAnimation = Mathf.Sin (Time.time * BobbingSpeed) * BobbingHeight * Time.deltaTime;
                 MovementVector = new Vector3 (MovementVector.x, MovementVector.y + yAnimation, MovementVector.z);
-                Controller.Move (MovementVector * MovementSpeed * Time.deltaTime);
+                Controller.Move ((MovementVector + StaggerMovementVector) * MovementSpeed * Time.deltaTime);
             }
         }
 	}
@@ -75,7 +81,7 @@ public class MeleeEnemyController : ActorController
         {
             PlayerController player = col.gameObject.GetComponent<PlayerController>();
             if (player != null)
-                player.TakeHit (col.point, MeleeAttackDamage);
+                player.TakeHit (col.point, MeleeAttackDamage, new BulletInfo (Vector3.zero, 1.0f));
 
             SelfDestruct();
             HasDetonated = true;

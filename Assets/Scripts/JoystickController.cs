@@ -55,11 +55,14 @@ public class JoystickController : CanvasTouchHandler
 
     private void PointerPositionUpdated (Vector2 pointerPosition)
     {
+        HasMouseDown = true; 
         Rect rect = GetComponent<RectTransform>().rect;
-        if (rect != null && rect.Contains (pointerPosition))
+        if (rect != null)
         {
             float x = (pointerPosition.x / rect.size.x) * 2.0f - 1.0f;
             float y = (pointerPosition.y / rect.size.y) * 2.0f - 1.0f;
+            x = Mathf.Clamp (x, -1.0f, 1.0f);
+            y = Mathf.Clamp (y, -1.0f, 1.0f);
             InputDirection = new Vector3 (x, 0, y);
             LimitInputAndUpdateJoystickPosition();
         }
@@ -76,6 +79,7 @@ public class JoystickController : CanvasTouchHandler
 
     private void endTouch()
     {
+        HasMouseDown = false; 
         InputDirection = Vector3.zero;
         LimitInputAndUpdateJoystickPosition();
         touchID = -1;
