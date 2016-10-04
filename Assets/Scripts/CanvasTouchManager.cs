@@ -52,7 +52,7 @@ public class CanvasTouchManager : CanvasTouchHandler
     void Start ()
     {
     }
-	
+
 	void Update ()
     {
         if (Input.touchCount > 0)
@@ -67,29 +67,32 @@ public class CanvasTouchManager : CanvasTouchHandler
 
     private void HandleMouseEvent (MouseEventType eventType)
     {
-        bool eventHandled = false;
-        for (int c = 0; c < CanvasObjects.Length; c++)
-        {
-            CanvasTouchHandler handler = CanvasObjects[c].GetComponent<CanvasTouchHandler>();
-            if (handler != null && (IsScreenPositionInChildBounds (CanvasObjects[c], Input.mousePosition) || handler.HasMouseDown))
+        if (SystemInfo.deviceType != DeviceType.Handheld)
+        { 
+            bool eventHandled = false;
+            for (int c = 0; c < CanvasObjects.Length; c++)
             {
+                CanvasTouchHandler handler = CanvasObjects[c].GetComponent<CanvasTouchHandler>();
+                if (handler != null && (IsScreenPositionInChildBounds (CanvasObjects[c], Input.mousePosition) || handler.HasMouseDown))
+                {
+                    switch (eventType)
+                    {
+                        case MouseEventType.MouseDown: handler.HandleMouseDownEvent (Input.mousePosition); break;
+                        case MouseEventType.MouseDrag: handler.HandleMouseDragEvent (Input.mousePosition); break;
+                        case MouseEventType.MouseUp:   handler.HandleMouseUpEvent   (Input.mousePosition); break;
+                    }
+                    eventHandled = true; 
+                    break;
+                }
+            }
+            if ( ! eventHandled)
+            { 
                 switch (eventType)
                 {
-                    case MouseEventType.MouseDown: handler.HandleMouseDownEvent (Input.mousePosition); break;
-                    case MouseEventType.MouseDrag: handler.HandleMouseDragEvent (Input.mousePosition); break;
-                    case MouseEventType.MouseUp:   handler.HandleMouseUpEvent   (Input.mousePosition); break;
+                    case MouseEventType.MouseDown: HandleMouseDownEvent (Input.mousePosition); break;
+                    case MouseEventType.MouseDrag: HandleMouseDragEvent (Input.mousePosition); break;
+                    case MouseEventType.MouseUp:   HandleMouseUpEvent   (Input.mousePosition); break;
                 }
-                eventHandled = true; 
-                break;
-            }
-        }
-        if ( ! eventHandled)
-        { 
-            switch (eventType)
-            {
-                case MouseEventType.MouseDown: HandleMouseDownEvent (Input.mousePosition); break;
-                case MouseEventType.MouseDrag: HandleMouseDragEvent (Input.mousePosition); break;
-                case MouseEventType.MouseUp:   HandleMouseUpEvent   (Input.mousePosition); break;
             }
         }
     }
@@ -114,6 +117,7 @@ public class CanvasTouchManager : CanvasTouchHandler
         for (int c = 0; c < CanvasObjects.Length; c++)
         {
             CanvasTouchHandler handler = CanvasObjects[c].GetComponent<CanvasTouchHandler>();
+
             bool touchInChild = IsScreenPositionInChildBounds (CanvasObjects[c], touch.position);
             if (handler != null && (handler.touchID == touch.fingerId || (handler.touchID == -1 && touchInChild)))
             {
