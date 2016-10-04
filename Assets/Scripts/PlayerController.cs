@@ -70,7 +70,7 @@ public class PlayerController : ActorController
 	    MovementVector.x = Input.GetAxis ("Horizontal");
         MovementVector.z = Input.GetAxis ("Vertical");
 
-        if (JoystickController.InputDirection.magnitude > 0)
+        if (JoystickController != null && JoystickController.InputDirection.magnitude > 0)
         {
             MovementVector.x = JoystickController.InputDirection.x;
             MovementVector.z = JoystickController.InputDirection.z;

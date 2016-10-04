@@ -58,8 +58,6 @@ public class ActorController : MonoBehaviour
     {
         if (GunComponent != null)
             GunComponent.Shoot (targetLocation);
-        else
-            Debug.Log("null");
     }
 
     public virtual void TakeHit (Vector3 hitLocation, float damage, BulletInfo bulletInfo)
