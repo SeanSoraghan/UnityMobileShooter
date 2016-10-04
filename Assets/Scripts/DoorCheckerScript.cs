@@ -3,8 +3,8 @@ using System.Collections;
 
 public class DoorCheckerScript : MonoBehaviour
 {
-    public GameObject Enemy;
-    public GameObject Door;
+    public GameObject[] Enemies;
+    public GameObject   Door;
 
     private DoorScript DoorController;
     private bool DoorOpened = false;
@@ -17,10 +17,19 @@ public class DoorCheckerScript : MonoBehaviour
 	
 	void Update ()
     {
-	    if (!DoorOpened && Enemy.gameObject == null)
+	    if (!DoorOpened && AreAllEnemiesDestroyed())
         { 
             DoorController.Open();
             DoorOpened = true;
         }
 	}
+
+    bool AreAllEnemiesDestroyed()
+    {
+        foreach (GameObject enemy in Enemies)
+            if (enemy.gameObject != null)
+                return false;
+
+        return true;
+    }
 }

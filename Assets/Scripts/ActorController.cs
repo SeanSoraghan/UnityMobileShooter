@@ -97,11 +97,17 @@ public class ActorController : MonoBehaviour
 
     public void PickUpGun (GameObject newGunObject)
     {
+        GunController newGunController = newGunObject.GetComponent<GunController>();
+
+        if (newGunController != null)
+            newGunController.MakeReal();
+
         Destroy (Gun);
         Gun = (GameObject) Instantiate (newGunObject, newGunObject.transform.position, newGunObject.transform.rotation);
 
         if (Gun != null)
             GunComponent = Gun.GetComponent<GunController>();
+
         
         Destroy (newGunObject);
     }

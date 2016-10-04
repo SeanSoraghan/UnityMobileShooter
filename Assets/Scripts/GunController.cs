@@ -15,26 +15,54 @@ public struct BulletInfo
 
 public class GunController : MonoBehaviour
 {
-    public float      ShotDamage      = 10.0f;
-    public float      FireRateSeconds = 2.0f;
-    public GameObject GunshotEffect;
-    public Transform  GunEnd;
+    public float         ShotDamage               = 10.0f;
+    public float         FireRateSeconds          = 2.0f;
+    public GameObject    GunshotEffect;
+    public Transform     GunEnd;
+    public bool          IsPickup                 = false;
+    public float         PickupAnimationSpeed     = 1.0f;
+    public float         PickupAnimationBobHeight = 0.2f;
+    public float         PickupAnimationBobSpeed  = 10.0f;
+    public static string GunTag                   = "Gun";
 
-    public static string GunTag = "Gun";
-
-    private float      LastShotTime        = 0.0f;
-    private float      SecondsBetweenShots = 1.0f;
+    private float      LastShotTime            = 0.0f;
+    private float      SecondsBetweenShots     = 1.0f;
     private RaycastHit shootRaycastResult;
+    private float      PickUpAnimationRotation = 0.0f;
+    private Vector3    DefaultPosition;
+    private Vector3    DefaultScale;
+    private Quaternion DefaultRotation;
 
 	void Start ()
     {
 	    SecondsBetweenShots = 1.0f / FireRateSeconds;
+        DefaultPosition     = transform.localPosition;
+        DefaultScale        = transform.localScale;
+        DefaultRotation     = transform.localRotation;
 	}
 	
+    public void MakeReal()
+    {
+        IsPickup = false;
+        transform.localRotation = DefaultRotation;
+        transform.localScale    = DefaultScale;
+        transform.localPosition = DefaultPosition;
+    }
+
 	void Update ()
     {
-	
-	}
+        if (IsPickup)
+        {
+            Vector3 r = transform.localRotation.eulerAngles;
+            transform.localRotation = Quaternion.Euler (r.x, PickUpAnimationRotation, r.z);
+
+            Vector3 p = transform.localPosition;
+            float animationBob = Mathf.Sin (Time.time * PickupAnimationBobSpeed) * PickupAnimationBobHeight;
+            transform.localPosition = new Vector3 (p.x, p.y + animationBob, p.z);
+
+            PickUpAnimationRotation += PickupAnimationSpeed;
+        }
+    }
 
     public void Shoot (Vector3 TargetLocation)
     {
