@@ -32,13 +32,4 @@ sysinfo.txt
 *.unitypackage
 
 
-*.opensdf
-*.sdf
-
-MobileControl/.backup
-MobileControl/.cache/
-MobileControl/GeneratedSoundBanks/
-MobileControl/*.validationcache
-MobileControl/*.wsettings
-MobileControl/*.validationcache
-MobileControl/*.wproj_migration.log
+MobileControl/
