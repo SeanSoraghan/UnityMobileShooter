@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID AMBIENCETRIGGER = 4045790759U;
         static const AkUniqueID BIRDCHIRP = 2337133864U;
+        static const AkUniqueID ELECTRICITYATTACK = 46902284U;
         static const AkUniqueID PISTOLSHOT = 3835771680U;
         static const AkUniqueID PLAYERFOOTSTEP = 3542290436U;
         static const AkUniqueID REVMOVEMENT = 2877874455U;
