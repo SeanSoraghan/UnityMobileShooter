@@ -14,7 +14,11 @@ public class SelfDestructEnemyBehaviour : MeleeEnemyController
 
     public override void Die()
     {
-        Attack();   
+        if (IsAlive)
+        { 
+            IsAlive = false;
+            Attack();
+        }
     }
 
     public override void Attack ()
@@ -27,9 +31,6 @@ public class SelfDestructEnemyBehaviour : MeleeEnemyController
             destructEffectObject.GetComponent<ParticleSystem>().Play();
             float duration = destructEffectObject.GetComponent<ParticleSystem>().duration;
             Destroy (destructEffectObject, duration + 0.5f);
-
-            if (ParentSpawner != null)
-                ParentSpawner.DecrementNumLiveSpawns();
             Destroy (gameObject, 0.1f);
         }
     }

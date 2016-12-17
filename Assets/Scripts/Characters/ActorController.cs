@@ -49,16 +49,17 @@ public class ActorController : MonoBehaviour
     {
         if (HealthPercentage <= 0.0f)
         {
-            IsAlive = false;
             Die();
         }
     }
 
     public virtual void Die()
     {
-        if (ParentSpawner != null)
-            ParentSpawner.DecrementNumLiveSpawns();
-        Destroy (gameObject);
+        if (IsAlive)
+        { 
+            IsAlive = false;
+            Destroy (gameObject);
+        }
     }
 
     public void UpdateActor() { Update(); }
