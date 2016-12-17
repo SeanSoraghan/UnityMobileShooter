@@ -39,15 +39,7 @@ public class CanvasTouchHandler : MonoBehaviour
 
 public class CanvasTouchManager : CanvasTouchHandler
 {
-    public static bool IsTagValidTarget (string tag)
-    {
-        return tag == EnemyController.EnemyTag;
-    }
-
     public GameObject[] CanvasObjects;
-    public GameObject   PlayerObject;
-
-    private RaycastHit raycastResult;
 
     void Start ()
     {
@@ -97,8 +89,19 @@ public class CanvasTouchManager : CanvasTouchHandler
         }
     }
 
-    public override void HandleMouseDownEvent (Vector2 mousePosition) { UpdatePlayerTargetFromScreenPosition (Input.mousePosition); }
-    public override void HandleMouseDragEvent (Vector2 mousePosition) { UpdatePlayerTargetFromScreenPosition (Input.mousePosition); }
+    private bool IsScreenPositionInChildBounds (GameObject childElement, Vector2 touchScreenPosition)
+    {
+        if (childElement == null)
+            return false;
+
+        RectTransform childRectTrasform = childElement.GetComponent<RectTransform>();
+        if (childRectTrasform == null)
+            return false;
+
+        Vector2 p = childRectTrasform.anchoredPosition;
+        Rect rect = new Rect (p.x, p.y, childRectTrasform.sizeDelta.x, childRectTrasform.sizeDelta.y);
+        return rect.Contains (touchScreenPosition);
+    }
 
     private void HandleTouches()
     {
@@ -138,46 +141,5 @@ public class CanvasTouchManager : CanvasTouchHandler
         else
             HandleTouchEnded (t);
     }
-
-    public override void HandleNewOrExistingTouch (Touch t)
-    {
-        base.HandleNewOrExistingTouch (t);
-        UpdatePlayerTargetFromScreenPosition (t.position);
-    }
-
-    private void UpdatePlayerTargetFromScreenPosition (Vector2 screenPosition)
-    {
-        if (PlayerObject != null)
-        { 
-            PlayerController controller = PlayerObject.GetComponent<PlayerController>();
-            Ray ray = Camera.main.ScreenPointToRay (screenPosition);
-            if (Physics.Raycast (ray, out raycastResult))
-            {
-                if (IsTagValidTarget (raycastResult.collider.gameObject.tag))
-                { 
-                    if (controller != null)
-                    { 
-                        controller.UpdatePlayerTargetPosition (raycastResult.collider.gameObject);
-                        return;
-                    }
-                }
-            }
-            if (controller != null)
-                controller.ClearTargetPosition();
-        }
-    }
-
-    private bool IsScreenPositionInChildBounds (GameObject childElement, Vector2 touchScreenPosition)
-    {
-        if (childElement == null)
-            return false;
-
-        RectTransform childRectTrasform = childElement.GetComponent<RectTransform>();
-        if (childRectTrasform == null)
-            return false;
-
-        Vector2 p = childRectTrasform.anchoredPosition;
-        Rect rect = new Rect (p.x, p.y, childRectTrasform.sizeDelta.x, childRectTrasform.sizeDelta.y);
-        return rect.Contains (touchScreenPosition);
-    }
+    
 }
