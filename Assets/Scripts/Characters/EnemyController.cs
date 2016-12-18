@@ -19,7 +19,7 @@ public class EnemyController : ActorController
         Initialise();
         Controller = GetComponent<CharacterController>();
         if (PlayerObject != null)
-            PlayerActorController = PlayerObject.GetComponent<ActorController>();
+            PlayerActorController = ObjectUtils.GetActorControllerFromObject (PlayerObject);
 	}
 	
 	void FixedUpdate ()

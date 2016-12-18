@@ -10,7 +10,7 @@ public struct PlayerTarget
 
     public Vector3 GetTargetLocation()
     {
-        ActorController actor = TargetObject.GetComponent<ActorController>();
+        ActorController actor = ObjectUtils.GetActorControllerFromObject (TargetObject);
 
         if (actor != null)
             return actor.GetTargetLocation();
@@ -185,7 +185,7 @@ public class PlayerController : ActorController
         bool TargetValid = Target.IsTargetValid ();
         if (TargetValid)
         { 
-            ActorController actor = Target.TargetObject.GetComponent<ActorController> ();
+            ActorController actor = ObjectUtils.GetActorControllerFromObject (Target.TargetObject);
             if (actor != null)
                 TargetValid = actor.IsAlive;
         }

@@ -11,8 +11,6 @@ public class MeleeEnemyController : ActorController
     public float      FollowDistance           = 50.0f;
     public float      Damping                  = 0.9f;
     public float      MeleeAttackDamage        = 2.0f;
-    public float      BobbingSpeed             = 5.0f;
-    public float      BobbingHeight            = 3.0f;
     public float      MovementSoundLength      = 16.5f;
     public float      NearbyEnemySpeedIncrease = 2.0f;
     public GameObject PlayerObject;
@@ -34,10 +32,10 @@ public class MeleeEnemyController : ActorController
     public override void Initialise ()
     {
         base.Initialise ();
-        Controller = GetComponent<CharacterController>();
+        Controller = GetComponentInChildren<CharacterController>();
 
         if (PlayerObject != null)
-            PlayerActorController = PlayerObject.GetComponent<ActorController>();
+            PlayerActorController = ObjectUtils.GetActorControllerFromObject (PlayerObject);
 
         EnemyContactIDs = new List<int>();
         BaseMovementSpeed = MovementSpeed;
@@ -69,10 +67,6 @@ public class MeleeEnemyController : ActorController
                     Vector3 playerTargetPoint = PlayerActorController.GetTargetLocation();
                     MovementVector = (playerTargetPoint - transform.position).normalized; 
                 }
-                float yAnimation = Mathf.Sin (Time.time * BobbingSpeed) * BobbingHeight * Time.deltaTime;
-                MovementVector = new Vector3 (MovementVector.x, MovementVector.y + yAnimation, MovementVector.z);
-                
-                
                 Controller.Move ((MovementVector + StaggerMovementVector) * MovementSpeed * Time.deltaTime);
             }
         }

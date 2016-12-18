@@ -99,7 +99,8 @@ public class GunController : MonoBehaviour
                 }
 
                 GameObject objectHit = shootRaycastResult.collider.gameObject;
-                ActorController actor = objectHit.GetComponent<ActorController>();
+                ActorController actor = ObjectUtils.GetActorControllerFromObject (objectHit);
+
                 if (actor != null)
                     actor.TakeHit (shootRaycastResult.point, ShotDamage, new BulletInfo (shootRayDirection, 1.0f));
             }
