@@ -7,7 +7,7 @@ public class EnemyController : ActorController
     public float      AttackDistance  = 50.0f;
     public float      Damping         = 0.9f;
     public GameObject PlayerObject;
-
+    public GameObject Target;
     public static string EnemyTag = "Enemy";
 
     private CharacterController Controller;
@@ -52,5 +52,11 @@ public class EnemyController : ActorController
     public void Shoot()
     {
         Shoot (PlayerActorController.GetTargetLocation());
+    }
+
+    public void ToggleTargetVisibility (bool targetShouldBeVisible)
+    {
+        if (Target != null)
+            Target.gameObject.SetActive (targetShouldBeVisible);
     }
 }

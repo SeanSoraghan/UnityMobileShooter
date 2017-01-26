@@ -1,0 +1,45 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2877874455	RevMovement			\Default Work Unit\Movement\RevMovement	
+	3542290436	PlayerFootstep			\Default Work Unit\Movement\PlayerFootstep	
+	4268612329	SphereMovement			\Default Work Unit\Movement\SphereMovement	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1158357337	FootfallMaterial			\Default Work Unit\FootfallMaterial	
+
+Switch	ID	Name	Switch Group			Notes
+	2195636714	Dirt	FootfallMaterial			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1556791747	CharacterSpeed			\Default Work Unit\CharacterMovement\CharacterSpeed	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	46381001	RevAlienMovement8	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\RevAlienMovement8_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemyRevMovement\RevAlienMovement8		176464
+	60486319	SinSciFiMovement9	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\SinSciFiMovement9_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemySphereMovement\SinSciFiMovement9		176464
+	69875495	RevAlienMovement10	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\RevAlienMovement10_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemyRevMovement\RevAlienMovement10		176464
+	73735961	HumanFootstep1	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\HumanFootstep1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\HumanStateFootsteps\FootstepsDirt\HumanFootstep1		113072
+	104596437	RevAlienMovement4	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\RevAlienMovement4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemyRevMovement\RevAlienMovement4		176464
+	218739898	SinSciFiMovement4	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\SinSciFiMovement4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemySphereMovement\SinSciFiMovement4		176464
+	221543500	RevAlienMovement12	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\RevAlienMovement12_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemyRevMovement\RevAlienMovement12		176464
+	280143144	SinSciFiMovement5	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\SinSciFiMovement5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemySphereMovement\SinSciFiMovement5		176464
+	281773049	HumanFootstep10	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\HumanFootstep10_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\HumanStateFootsteps\FootstepsDirt\HumanFootstep10		187492
+	297001954	RevAlienMovement11	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\RevAlienMovement11_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemyRevMovement\RevAlienMovement11		176464
+	336502257	HumanFootstep6	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\HumanFootstep6_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\HumanStateFootsteps\FootstepsDirt\HumanFootstep6		220564
+	455088151	HumanFootstep2	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\HumanFootstep2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\HumanStateFootsteps\FootstepsDirt\HumanFootstep2		132364
+	522313464	HumanFootstep8	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\HumanFootstep8_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\HumanStateFootsteps\FootstepsDirt\HumanFootstep8		352864
+	542643225	SinSciFiMovement6	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\SinSciFiMovement6_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemySphereMovement\SinSciFiMovement6		176464
+	543960253	RevAlienMovement2	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\RevAlienMovement2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemyRevMovement\RevAlienMovement2		176464
+	566299293	RevAlienMovement5	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\RevAlienMovement5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemyRevMovement\RevAlienMovement5		176464
+	605791537	RevAlienMovement9	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\RevAlienMovement9_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemyRevMovement\RevAlienMovement9		176464
+	659393642	SinSciFiMovement8	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\SinSciFiMovement8_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemySphereMovement\SinSciFiMovement8		176464
+	674523326	SinSciFiMovement3	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\SinSciFiMovement3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemySphereMovement\SinSciFiMovement3		176464
+	693088414	HumanFootstep7	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\HumanFootstep7_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\HumanStateFootsteps\FootstepsDirt\HumanFootstep7		352864
+	722854420	HumanFootstep5	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\HumanFootstep5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\HumanStateFootsteps\FootstepsDirt\HumanFootstep5		242616
+	804629408	HumanFootstep9	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\HumanFootstep9_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\HumanStateFootsteps\FootstepsDirt\HumanFootstep9		176464
+	814954570	RevAlienMovement1	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\RevAlienMovement1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemyRevMovement\RevAlienMovement1		176464
+	877343312	SinSciFiMovement10	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\SinSciFiMovement10_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemySphereMovement\SinSciFiMovement10		176464
+	878683434	RevAlienMovement6	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\RevAlienMovement6_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemyRevMovement\RevAlienMovement6		176464
+	954639852	RevAlienMovement7	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\RevAlienMovement7_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemyRevMovement\RevAlienMovement7		176464
+	961348584	SinSciFiMovement1	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\SinSciFiMovement1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemySphereMovement\SinSciFiMovement1		176464
+	988107733	SinSciFiMovement2	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\SinSciFiMovement2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemySphereMovement\SinSciFiMovement2		176464
+	1009969191	RevAlienMovement3	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\SFX\RevAlienMovement3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterMovement\EnemyRevMovement\RevAlienMovement3		176464
+

@@ -165,14 +165,27 @@ public class PlayerController : ActorController
         UpdateAnimationParameters();
     }
 
+    public void ToggleEnemyTargetVisibility (bool visibility)
+    {
+        if (Target.IsTargetValid())
+        { 
+            EnemyController enemy = ObjectUtils.GetEnemyControllerFromObject (Target.TargetObject);//Target.TargetObject.GetComponent<EnemyController>();
+            if (enemy != null)
+                enemy.ToggleTargetVisibility (visibility);
+        }
+    }
+
     public void UpdatePlayerTargetPosition (GameObject targetObject)
     {
+        ClearTargetPosition();
         Target = new PlayerTarget (targetObject);
+        ToggleEnemyTargetVisibility (true);
         UpdateAnimationParameters();
     }
 
     public void ClearTargetPosition()
     {
+        ToggleEnemyTargetVisibility (false);
         Target = new PlayerTarget (null);
         UpdateAnimationParameters();
     }

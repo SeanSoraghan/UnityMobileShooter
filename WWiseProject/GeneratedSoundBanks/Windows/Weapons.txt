@@ -1,0 +1,12 @@
+Event	ID	Name			Wwise Object Path	Notes
+	46902284	ElectricityAttack			\Default Work Unit\Weapons\ElectricityAttack	
+	1062449581	RifleShot			\Default Work Unit\Weapons\RifleShot	
+	3835771680	PistolShot			\Default Work Unit\Weapons\PistolShot	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	161849759	PistolGunshot	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\SFX\PistolGunshot_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\PistolShots\PistolGunshot		467580
+	184056828	StaticAttack	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\SFX\StaticAttack_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\ElectricAttack\StaticAttack		352864
+	193370009	Gunshot4	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\SFX\Gunshot4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\PistolShots\Gunshot4		467580
+	701438380	Gunshot2	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\SFX\Gunshot2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\RifleShots\Gunshot2		467580
+	938408082	Gunshot3	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\SFX\Gunshot3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Weapons\PistolShots\Gunshot3		467580
+

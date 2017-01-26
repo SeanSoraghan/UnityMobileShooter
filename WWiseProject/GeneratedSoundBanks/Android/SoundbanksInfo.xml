@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="11" SoundbankVersion="118">
+	<RootPaths>
+		<ProjectRoot>D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\</ProjectRoot>
+		<SourceFilesRoot>D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\GeneratedSoundBanks\Android\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\GeneratedSoundBanks\Android\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="85412153" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Ambience</ObjectPath>
+			<ShortName>Ambience</ShortName>
+			<Path>Ambience.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4045790759" Name="AmbienceTrigger" ObjectPath="\Events\Default Work Unit\Ambience\AmbienceTrigger"/>
+				<Event Id="2337133864" Name="BirdChirp" ObjectPath="\Events\Default Work Unit\Ambience\BirdChirp"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="111290762" Language="SFX">
+					<ShortName>BirdsChirp4.wav</ShortName>
+					<Path>SFX\BirdsChirp4_9E69E797.wem</Path>
+				</File>
+				<File Id="231497003" Language="SFX">
+					<ShortName>BirdsChirpLong2.wav</ShortName>
+					<Path>SFX\BirdsChirpLong2_9E69E797.wem</Path>
+				</File>
+				<File Id="238209076" Language="SFX">
+					<ShortName>BirdsChirp5.wav</ShortName>
+					<Path>SFX\BirdsChirp5_9E69E797.wem</Path>
+				</File>
+				<File Id="388812268" Language="SFX">
+					<ShortName>BirdsChirp6.wav</ShortName>
+					<Path>SFX\BirdsChirp6_9E69E797.wem</Path>
+				</File>
+				<File Id="531321319" Language="SFX">
+					<ShortName>BirdChirp2.wav</ShortName>
+					<Path>SFX\BirdChirp2_9E69E797.wem</Path>
+				</File>
+				<File Id="826623806" Language="SFX">
+					<ShortName>BirdsChirpLong3.wav</ShortName>
+					<Path>SFX\BirdsChirpLong3_9E69E797.wem</Path>
+				</File>
+				<File Id="887469087" Language="SFX">
+					<ShortName>BirdChirp1.wav</ShortName>
+					<Path>SFX\BirdChirp1_9E69E797.wem</Path>
+				</File>
+				<File Id="932368116" Language="SFX">
+					<ShortName>AlienAmbience.wav</ShortName>
+					<Path>SFX\AlienAmbience_4B8CC0C5.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1150397965" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\CharacterMovement</ObjectPath>
+			<ShortName>CharacterMovement</ShortName>
+			<Path>CharacterMovement.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3542290436" Name="PlayerFootstep" ObjectPath="\Events\Default Work Unit\Movement\PlayerFootstep"/>
+				<Event Id="2877874455" Name="RevMovement" ObjectPath="\Events\Default Work Unit\Movement\RevMovement"/>
+				<Event Id="4268612329" Name="SphereMovement" ObjectPath="\Events\Default Work Unit\Movement\SphereMovement"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="46381001" Language="SFX">
+					<ShortName>RevAlienMovement8.wav</ShortName>
+					<Path>SFX\RevAlienMovement8_9E69E797.wem</Path>
+				</File>
+				<File Id="60486319" Language="SFX">
+					<ShortName>SinSciFiMovement9.wav</ShortName>
+					<Path>SFX\SinSciFiMovement9_9E69E797.wem</Path>
+				</File>
+				<File Id="69875495" Language="SFX">
+					<ShortName>RevAlienMovement10.wav</ShortName>
+					<Path>SFX\RevAlienMovement10_9E69E797.wem</Path>
+				</File>
+				<File Id="73735961" Language="SFX">
+					<ShortName>HumanFootstep1.wav</ShortName>
+					<Path>SFX\HumanFootstep1_9E69E797.wem</Path>
+				</File>
+				<File Id="104596437" Language="SFX">
+					<ShortName>RevAlienMovement4.wav</ShortName>
+					<Path>SFX\RevAlienMovement4_9E69E797.wem</Path>
+				</File>
+				<File Id="218739898" Language="SFX">
+					<ShortName>SinSciFiMovement4.wav</ShortName>
+					<Path>SFX\SinSciFiMovement4_9E69E797.wem</Path>
+				</File>
+				<File Id="221543500" Language="SFX">
+					<ShortName>RevAlienMovement12.wav</ShortName>
+					<Path>SFX\RevAlienMovement12_9E69E797.wem</Path>
+				</File>
+				<File Id="280143144" Language="SFX">
+					<ShortName>SinSciFiMovement5.wav</ShortName>
+					<Path>SFX\SinSciFiMovement5_9E69E797.wem</Path>
+				</File>
+				<File Id="281773049" Language="SFX">
+					<ShortName>HumanFootstep10.wav</ShortName>
+					<Path>SFX\HumanFootstep10_9E69E797.wem</Path>
+				</File>
+				<File Id="297001954" Language="SFX">
+					<ShortName>RevAlienMovement11.wav</ShortName>
+					<Path>SFX\RevAlienMovement11_9E69E797.wem</Path>
+				</File>
+				<File Id="336502257" Language="SFX">
+					<ShortName>HumanFootstep6.wav</ShortName>
+					<Path>SFX\HumanFootstep6_9E69E797.wem</Path>
+				</File>
+				<File Id="455088151" Language="SFX">
+					<ShortName>HumanFootstep2.wav</ShortName>
+					<Path>SFX\HumanFootstep2_9E69E797.wem</Path>
+				</File>
+				<File Id="522313464" Language="SFX">
+					<ShortName>HumanFootstep8.wav</ShortName>
+					<Path>SFX\HumanFootstep8_9E69E797.wem</Path>
+				</File>
+				<File Id="542643225" Language="SFX">
+					<ShortName>SinSciFiMovement6.wav</ShortName>
+					<Path>SFX\SinSciFiMovement6_9E69E797.wem</Path>
+				</File>
+				<File Id="543960253" Language="SFX">
+					<ShortName>RevAlienMovement2.wav</ShortName>
+					<Path>SFX\RevAlienMovement2_9E69E797.wem</Path>
+				</File>
+				<File Id="566299293" Language="SFX">
+					<ShortName>RevAlienMovement5.wav</ShortName>
+					<Path>SFX\RevAlienMovement5_9E69E797.wem</Path>
+				</File>
+				<File Id="605791537" Language="SFX">
+					<ShortName>RevAlienMovement9.wav</ShortName>
+					<Path>SFX\RevAlienMovement9_9E69E797.wem</Path>
+				</File>
+				<File Id="659393642" Language="SFX">
+					<ShortName>SinSciFiMovement8.wav</ShortName>
+					<Path>SFX\SinSciFiMovement8_9E69E797.wem</Path>
+				</File>
+				<File Id="674523326" Language="SFX">
+					<ShortName>SinSciFiMovement3.wav</ShortName>
+					<Path>SFX\SinSciFiMovement3_9E69E797.wem</Path>
+				</File>
+				<File Id="693088414" Language="SFX">
+					<ShortName>HumanFootstep7.wav</ShortName>
+					<Path>SFX\HumanFootstep7_9E69E797.wem</Path>
+				</File>
+				<File Id="722854420" Language="SFX">
+					<ShortName>HumanFootstep5.wav</ShortName>
+					<Path>SFX\HumanFootstep5_9E69E797.wem</Path>
+				</File>
+				<File Id="804629408" Language="SFX">
+					<ShortName>HumanFootstep9.wav</ShortName>
+					<Path>SFX\HumanFootstep9_9E69E797.wem</Path>
+				</File>
+				<File Id="814954570" Language="SFX">
+					<ShortName>RevAlienMovement1.wav</ShortName>
+					<Path>SFX\RevAlienMovement1_9E69E797.wem</Path>
+				</File>
+				<File Id="877343312" Language="SFX">
+					<ShortName>SinSciFiMovement10.wav</ShortName>
+					<Path>SFX\SinSciFiMovement10_9E69E797.wem</Path>
+				</File>
+				<File Id="878683434" Language="SFX">
+					<ShortName>RevAlienMovement6.wav</ShortName>
+					<Path>SFX\RevAlienMovement6_9E69E797.wem</Path>
+				</File>
+				<File Id="954639852" Language="SFX">
+					<ShortName>RevAlienMovement7.wav</ShortName>
+					<Path>SFX\RevAlienMovement7_9E69E797.wem</Path>
+				</File>
+				<File Id="961348584" Language="SFX">
+					<ShortName>SinSciFiMovement1.wav</ShortName>
+					<Path>SFX\SinSciFiMovement1_9E69E797.wem</Path>
+				</File>
+				<File Id="988107733" Language="SFX">
+					<ShortName>SinSciFiMovement2.wav</ShortName>
+					<Path>SFX\SinSciFiMovement2_9E69E797.wem</Path>
+				</File>
+				<File Id="1009969191" Language="SFX">
+					<ShortName>RevAlienMovement3.wav</ShortName>
+					<Path>SFX\RevAlienMovement3_9E69E797.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1467963052" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Weapons</ObjectPath>
+			<ShortName>Weapons</ShortName>
+			<Path>Weapons.bnk</Path>
+			<IncludedEvents>
+				<Event Id="46902284" Name="ElectricityAttack" ObjectPath="\Events\Default Work Unit\Weapons\ElectricityAttack"/>
+				<Event Id="3835771680" Name="PistolShot" ObjectPath="\Events\Default Work Unit\Weapons\PistolShot"/>
+				<Event Id="1062449581" Name="RifleShot" ObjectPath="\Events\Default Work Unit\Weapons\RifleShot"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="161849759" Language="SFX">
+					<ShortName>PistolGunshot.wav</ShortName>
+					<Path>SFX\PistolGunshot_9E69E797.wem</Path>
+				</File>
+				<File Id="184056828" Language="SFX">
+					<ShortName>StaticAttack.wav</ShortName>
+					<Path>SFX\StaticAttack_9E69E797.wem</Path>
+				</File>
+				<File Id="193370009" Language="SFX">
+					<ShortName>Gunshot4.wav</ShortName>
+					<Path>SFX\Gunshot4_9E69E797.wem</Path>
+				</File>
+				<File Id="701438380" Language="SFX">
+					<ShortName>Gunshot2.wav</ShortName>
+					<Path>SFX\Gunshot2_9E69E797.wem</Path>
+				</File>
+				<File Id="938408082" Language="SFX">
+					<ShortName>Gunshot3.wav</ShortName>
+					<Path>SFX\Gunshot3_9E69E797.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

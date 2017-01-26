@@ -1,0 +1,14 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2337133864	BirdChirp			\Default Work Unit\Ambience\BirdChirp	
+	4045790759	AmbienceTrigger			\Default Work Unit\Ambience\AmbienceTrigger	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	111290762	BirdsChirp4	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\SFX\BirdsChirp4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Chirps\BirdsChirp4		617464
+	231497003	BirdsChirpLong2	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\SFX\BirdsChirpLong2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Chirps\BirdsChirpLong2		573364
+	238209076	BirdsChirp5	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\SFX\BirdsChirp5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Chirps\BirdsChirp5		419016
+	388812268	BirdsChirp6	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\SFX\BirdsChirp6_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Chirps\BirdsChirp6		540292
+	531321319	BirdChirp2	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\SFX\BirdChirp2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Chirps\BirdChirp2		352864
+	826623806	BirdsChirpLong3	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\SFX\BirdsChirpLong3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Chirps\BirdsChirpLong3		622980
+	887469087	BirdChirp1	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\SFX\BirdChirp1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Chirps\BirdChirp1		705664
+	932368116	AlienAmbience	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\SFX\AlienAmbience_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AlienAmbience		36426664
+

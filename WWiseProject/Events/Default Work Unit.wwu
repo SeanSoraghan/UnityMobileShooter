@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2B359B8C-5A5A-4801-9CD9-3F9A865E1DE2}" SchemaVersion="72">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{2B359B8C-5A5A-4801-9CD9-3F9A865E1DE2}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Weapons" ID="{B51F338C-D3B6-4CA8-8C05-1B2C806966BB}" ShortID="696219768">
+					<ChildrenList>
+						<Event Name="RifleShot" ID="{75D928B1-3233-42AD-9DC0-650550826C6D}">
+							<ChildrenList>
+								<Action Name="Play" ID="{30602197-F8B8-438B-B579-C2B7FFAD2B5B}" ShortID="232892675" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{F3CE2B90-1AA1-42B9-99E5-B428F171AE6F}" Global="false">
+											<ObjectRef Name="RifleShots" ID="{6E91DC70-CA47-48F6-8A33-C9435F5080A6}" WorkUnitID="{26C5960B-50C3-4966-B277-43371976A22C}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PistolShot" ID="{65F8E68A-A361-4294-A71D-F023B9E89497}">
+							<ChildrenList>
+								<Action Name="Play" ID="{BBAA96CC-EE6C-410C-97AB-70876A6BD06A}" ShortID="695732149" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{A9BB5AEF-DD14-47B0-AA22-44235F467BB8}" Global="false">
+											<ObjectRef Name="PistolShots" ID="{EAF618F2-EB79-411F-BDC0-0476CFA81219}" WorkUnitID="{26C5960B-50C3-4966-B277-43371976A22C}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ElectricityAttack" ID="{D2CFCB6F-3917-45CE-85E5-B7472A0308A5}">
+							<ChildrenList>
+								<Action Name="Play" ID="{9C5F909B-333F-4DFF-AC2D-CEB9C4FBE40A}" ShortID="236496575" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{0708D2CE-F3A0-4472-AB36-D53DAF566789}" Global="false">
+											<ObjectRef Name="ElectricAttack" ID="{D7930196-EEC6-408A-B5C2-EF67D8E492E9}" WorkUnitID="{26C5960B-50C3-4966-B277-43371976A22C}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ambience" ID="{35E7CA84-270B-4426-BE7C-09070FBFF017}" ShortID="144951514">
+					<ChildrenList>
+						<Event Name="AmbienceTrigger" ID="{A8027482-D60C-4C79-AA4C-54DFA44DB35E}">
+							<ChildrenList>
+								<Action Name="Play" ID="{52B04924-8F01-4A87-AB02-AD0F7A8A7299}" ShortID="780521327" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{54361A94-FCB5-4D51-BE63-9076AC73FA33}" Global="false">
+											<ObjectRef Name="AlienAmbience" ID="{DC23461D-612C-436D-89D7-FC993C3F06F0}" WorkUnitID="{26C5960B-50C3-4966-B277-43371976A22C}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="BirdChirp" ID="{6CE66820-1A50-4588-871D-94802D691C38}">
+							<ChildrenList>
+								<Action Name="Play" ID="{C32BDDE8-3BF7-4019-A409-38E7BD0D82BC}" ShortID="777109763" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{4A019A08-0242-485A-B1CD-6CCD01479E86}" Global="false">
+											<ObjectRef Name="Chirps" ID="{A72B6129-79A4-404B-AA19-948C3E65CBA5}" WorkUnitID="{26C5960B-50C3-4966-B277-43371976A22C}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Movement" ID="{9C10A8BF-C498-4972-B9A9-DC348BF88035}" ShortID="632181952">
+					<ChildrenList>
+						<Event Name="RevMovement" ID="{59DE247F-10A2-499A-A4D6-22A23B0CCC11}">
+							<ChildrenList>
+								<Action Name="Play" ID="{4160C975-F46A-4B66-8F04-4A274A20611B}" ShortID="339674094" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{4FBFCD13-686F-4301-81E8-F002246B103B}" Global="false">
+											<ObjectRef Name="EnemyRevMovement" ID="{2755BA19-BFE4-4D80-B941-946C6FB62854}" WorkUnitID="{26C5960B-50C3-4966-B277-43371976A22C}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="SphereMovement" ID="{C15755D1-9196-4969-8BD9-7D05B78EBB30}">
+							<ChildrenList>
+								<Action Name="Play" ID="{829DB650-D175-4914-A1A5-B897DB90A6C0}" ShortID="787437467" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{64B61762-B5B7-44B1-856C-54CE9029E458}" Global="false">
+											<ObjectRef Name="EnemySphereMovement" ID="{823DF616-1B6D-49A6-B7D8-7FB0DC0F897E}" WorkUnitID="{26C5960B-50C3-4966-B277-43371976A22C}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PlayerFootstep" ID="{94D3FA9B-368F-48DC-9869-E84E1F1956CC}">
+							<ChildrenList>
+								<Action Name="Play" ID="{73546234-CB0B-4D2D-AC7E-E24CC3E6FF90}" ShortID="180206772" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{D2D37993-FD6C-42D8-80BA-48D86A646DEB}" Global="false">
+											<ObjectRef Name="HumanStateFootsteps" ID="{4E4793E5-0FD9-4D32-B46F-2D72666CA61A}" WorkUnitID="{26C5960B-50C3-4966-B277-43371976A22C}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

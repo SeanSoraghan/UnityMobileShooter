@@ -1,0 +1,21 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1302460477	AlienMovement			\Default Work Unit\AlienMovement	
+	3121599344	MetalImpact			\Default Work Unit\MetalImpact	
+	3835771680	PistolShot			\Default Work Unit\PistolShot	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2152545605	EnemyMoving			\Default Work Unit\EnemyMoving	
+
+State	ID	Name	State Group			Notes
+	748895195	None	EnemyMoving			
+	1033359058	NotMoving	EnemyMoving			
+	2649703675	Moving	EnemyMoving			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	392340065	NotMoving	EnemyMoving	\Actor-Mixer Hierarchy\Default Work Unit\RevAlienSound		
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	322949708	RevAlienSound	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\SFX\RevAlienSound_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\RevAlienSound		2872364
+	475984311	MetalThump	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\SFX\MetalThump_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\MetalThump		441064
+	1026476102	Gunshot	D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\SFX\Gunshot_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gunshot		453412
+

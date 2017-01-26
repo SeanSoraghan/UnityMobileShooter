@@ -35,7 +35,7 @@ sysinfo.txt
 *.opensdf
 *.sdf
 Assets/Wwise/
-MobileControl/
+# MobileControl/
 # MobileControl/.backup
 # MobileControl/.cache/
 # MobileControl/GeneratedSoundBanks/

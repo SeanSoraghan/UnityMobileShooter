@@ -1,0 +1,7 @@
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Master Audio Bus\Ambience	
+	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
+	1942696649	Effects			\Default Work Unit\Master Audio Bus\Effects	
+	2129636626	Movement			\Default Work Unit\Master Audio Bus\Movement	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+

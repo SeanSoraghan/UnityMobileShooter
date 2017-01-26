@@ -10,4 +10,12 @@ public class ObjectUtils {
             actor = obj.GetComponentInParent<ActorController>();
         return actor;
     }
+
+    public static EnemyController GetEnemyControllerFromObject (GameObject obj)
+    {
+        EnemyController actor = obj.GetComponentInChildren<EnemyController>();
+        if (actor == null)
+            actor = obj.GetComponentInParent<EnemyController>();
+        return actor;
+    }
 }

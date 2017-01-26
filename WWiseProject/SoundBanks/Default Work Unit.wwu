@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{26892DBF-79D3-4681-874A-2EBF2EBD4285}" SchemaVersion="72">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{26892DBF-79D3-4681-874A-2EBF2EBD4285}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Ambience" ID="{60A95A12-BD47-450E-A6F1-1705F6C23F8B}">
+					<ObjectInclusionList>
+						<ObjectRef Name="BirdChirp" ID="{6CE66820-1A50-4588-871D-94802D691C38}" WorkUnitID="{2B359B8C-5A5A-4801-9CD9-3F9A865E1DE2}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="AmbienceTrigger" ID="{A8027482-D60C-4C79-AA4C-54DFA44DB35E}" WorkUnitID="{2B359B8C-5A5A-4801-9CD9-3F9A865E1DE2}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="CharacterMovement" ID="{881389A2-2790-4535-9A4D-801A67E44811}">
+					<ObjectInclusionList>
+						<ObjectRef Name="PlayerFootstep" ID="{94D3FA9B-368F-48DC-9869-E84E1F1956CC}" WorkUnitID="{2B359B8C-5A5A-4801-9CD9-3F9A865E1DE2}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="SphereMovement" ID="{C15755D1-9196-4969-8BD9-7D05B78EBB30}" WorkUnitID="{2B359B8C-5A5A-4801-9CD9-3F9A865E1DE2}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="RevMovement" ID="{59DE247F-10A2-499A-A4D6-22A23B0CCC11}" WorkUnitID="{2B359B8C-5A5A-4801-9CD9-3F9A865E1DE2}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Weapons" ID="{45D0B35A-CAA5-444E-9DE8-BC4DE83621B0}">
+					<ObjectInclusionList>
+						<ObjectRef Name="PistolShot" ID="{65F8E68A-A361-4294-A71D-F023B9E89497}" WorkUnitID="{2B359B8C-5A5A-4801-9CD9-3F9A865E1DE2}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="RifleShot" ID="{75D928B1-3233-42AD-9DC0-650550826C6D}" WorkUnitID="{2B359B8C-5A5A-4801-9CD9-3F9A865E1DE2}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ElectricityAttack" ID="{D2CFCB6F-3917-45CE-85E5-B7472A0308A5}" WorkUnitID="{2B359B8C-5A5A-4801-9CD9-3F9A865E1DE2}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

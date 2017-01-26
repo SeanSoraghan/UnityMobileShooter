@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationCache Version="1" SchemaVersion="72">
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="2036354828" DateHigh="30562149"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="3811295686" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="3811705990" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Attenuations\Default Work Unit.wwu" DateLow="3346631262" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Audio Devices\Default Work Unit.wwu" DateLow="3346441138" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Control Surface Sessions\Default Work Unit.wwu" DateLow="3346406229" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Conversion Settings\Default Work Unit.wwu" DateLow="3346481298" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Conversion Settings\Factory Conversion Settings.wwu" DateLow="3812831849" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Dynamic Dialogue\Default Work Unit.wwu" DateLow="3346676439" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Effects\Default Work Unit.wwu" DateLow="3346073062" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Effects\Factory Auro Headphone.wwu" DateLow="673093266" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Effects\Factory Effects.wwu" DateLow="3811020127" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Effects\Factory iZotope Box Modeler.wwu" DateLow="3650902491" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Effects\Factory iZotope Delay.wwu" DateLow="2836358315" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Effects\Factory iZotope Dynamics.wwu" DateLow="2842996172" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Effects\Factory iZotope Filters.wwu" DateLow="2837304140" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="2846003286" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="2842490768" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="2836308277" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Effects\Factory McDSP Effects.wwu" DateLow="1736866070" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Events\Default Work Unit.wwu" DateLow="2036464912" DateHigh="30562149"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Game Parameters\Default Work Unit.wwu" DateLow="3711442241" DateHigh="30549348"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="3810574791" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="3346556333" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3845814646" DateHigh="30549324"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Mixing Sessions\Default Work Unit.wwu" DateLow="3346716414" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\MobileControl.Sean.wsettings" DateLow="4157430514" DateHigh="30562149"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\MobileControl.wproj" DateLow="3519122867" DateHigh="30549112"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Modulators\Default Work Unit.wwu" DateLow="3346521478" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Presets\Default Work Unit.wwu" DateLow="3346108086" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Queries\Default Work Unit.wwu" DateLow="3346188143" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Queries\Factory Queries.wwu" DateLow="3812211480" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\SoundBanks\Default Work Unit.wwu" DateLow="4152178719" DateHigh="30562149"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Soundcaster Sessions\Default Work Unit.wwu" DateLow="3346153107" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\States\Default Work Unit.wwu" DateLow="3093459841" DateHigh="30549213"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Switches\Default Work Unit.wwu" DateLow="83790909" DateHigh="30549323"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\Triggers\Default Work Unit.wwu" DateLow="3346591230" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="2036354828" DateHigh="30562149"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="3811295686" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="3811705990" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Attenuations\Default Work Unit.wwu" DateLow="3346631262" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Audio Devices\Default Work Unit.wwu" DateLow="3346441138" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="3346406229" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="3346481298" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Conversion Settings\Factory Conversion Settings.wwu" DateLow="3812831849" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="3346676439" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Effects\Default Work Unit.wwu" DateLow="3346073062" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Effects\Factory Auro Headphone.wwu" DateLow="673093266" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Effects\Factory Effects.wwu" DateLow="3811020127" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Effects\Factory iZotope Box Modeler.wwu" DateLow="3650902491" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Effects\Factory iZotope Delay.wwu" DateLow="2836358315" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Effects\Factory iZotope Dynamics.wwu" DateLow="2842996172" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Effects\Factory iZotope Filters.wwu" DateLow="2837304140" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="2846003286" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="2842490768" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="2836308277" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Effects\Factory McDSP Effects.wwu" DateLow="1736866070" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Events\Default Work Unit.wwu" DateLow="2036464912" DateHigh="30562149"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Game Parameters\Default Work Unit.wwu" DateLow="3711442241" DateHigh="30549348"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="3810574791" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="3346556333" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3845814646" DateHigh="30549324"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="3346716414" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\MobileControl.Sean.wsettings" DateLow="3566124578" DateHigh="30570507"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\MobileControl.wproj" DateLow="3519122867" DateHigh="30549112"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Modulators\Default Work Unit.wwu" DateLow="3346521478" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Presets\Default Work Unit.wwu" DateLow="3346108086" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Queries\Default Work Unit.wwu" DateLow="3346188143" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Queries\Factory Queries.wwu" DateLow="3812211480" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\SoundBanks\Default Work Unit.wwu" DateLow="4152178719" DateHigh="30562149"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="3346153107" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\States\Default Work Unit.wwu" DateLow="3093459841" DateHigh="30549213"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Switches\Default Work Unit.wwu" DateLow="83790909" DateHigh="30549323"/>
+	<ValidationCacheItem File="D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\Triggers\Default Work Unit.wwu" DateLow="3346591230" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3345998010" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="3811295686" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="3811705990" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Attenuations\Default Work Unit.wwu" DateLow="3346631262" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Audio Devices\Default Work Unit.wwu" DateLow="3346441138" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Control Surface Sessions\Default Work Unit.wwu" DateLow="3346406229" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Conversion Settings\Default Work Unit.wwu" DateLow="3346481298" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Conversion Settings\Factory Conversion Settings.wwu" DateLow="3812831849" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Dynamic Dialogue\Default Work Unit.wwu" DateLow="3346676439" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Effects\Default Work Unit.wwu" DateLow="3346073062" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Effects\Factory Auro Headphone.wwu" DateLow="673093266" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Effects\Factory Effects.wwu" DateLow="3811020127" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Effects\Factory iZotope Box Modeler.wwu" DateLow="2839898696" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Effects\Factory iZotope Delay.wwu" DateLow="2836358315" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Effects\Factory iZotope Dynamics.wwu" DateLow="2842996172" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Effects\Factory iZotope Filters.wwu" DateLow="2837304140" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="2846003286" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="2842490768" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="2836308277" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Effects\Factory McDSP Effects.wwu" DateLow="1736866070" DateHigh="30549109"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Events\Default Work Unit.wwu" DateLow="3346258190" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Game Parameters\Default Work Unit.wwu" DateLow="3346038039" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="3810574791" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="3346556333" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3346223171" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Mixing Sessions\Default Work Unit.wwu" DateLow="3346716414" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\MobileControl.wproj" DateLow="3345947973" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Modulators\Default Work Unit.wwu" DateLow="3346521478" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Presets\Default Work Unit.wwu" DateLow="3346108086" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Queries\Default Work Unit.wwu" DateLow="3346188143" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Queries\Factory Queries.wwu" DateLow="3812211480" DateHigh="30549108"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\SoundBanks\Default Work Unit.wwu" DateLow="3346371234" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Soundcaster Sessions\Default Work Unit.wwu" DateLow="3346153107" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\States\Default Work Unit.wwu" DateLow="3346336054" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Switches\Default Work Unit.wwu" DateLow="3346293218" DateHigh="30549111"/>
+	<ValidationCacheItem File="D:\Documents\SD\WWiseProjects\UnityIntegration\MobileControl\Triggers\Default Work Unit.wwu" DateLow="3346591230" DateHigh="30549111"/>
+</ValidationCache>
