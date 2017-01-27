@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="11" SoundbankVersion="118">
 	<RootPaths>
-		<ProjectRoot>D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\</ProjectRoot>
-		<SourceFilesRoot>D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Android\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\GeneratedSoundBanks\Android\</SoundBanksRoot>
+		<ProjectRoot>D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\GeneratedSoundBanks\Android\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\GeneratedSoundBanks\Android\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\GeneratedSoundBanks\Android\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>

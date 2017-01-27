@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ObjectUtils {
+public class ObjectUtils
+{
    
 	public static ActorController GetActorControllerFromObject (GameObject obj)
     {
@@ -11,11 +12,11 @@ public class ObjectUtils {
         return actor;
     }
 
-    public static EnemyController GetEnemyControllerFromObject (GameObject obj)
+    public static MeleeEnemyController GetMeleeEnemyControllerFromObject (GameObject obj)
     {
-        EnemyController actor = obj.GetComponentInChildren<EnemyController>();
+        MeleeEnemyController actor = obj.GetComponentInChildren<MeleeEnemyController>();
         if (actor == null)
-            actor = obj.GetComponentInParent<EnemyController>();
+            actor = obj.GetComponentInParent<MeleeEnemyController>();
         return actor;
     }
 }

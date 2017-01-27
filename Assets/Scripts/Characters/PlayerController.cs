@@ -169,7 +169,7 @@ public class PlayerController : ActorController
     {
         if (Target.IsTargetValid())
         { 
-            EnemyController enemy = ObjectUtils.GetEnemyControllerFromObject (Target.TargetObject);//Target.TargetObject.GetComponent<EnemyController>();
+            MeleeEnemyController enemy = ObjectUtils.GetMeleeEnemyControllerFromObject (Target.TargetObject);//Target.TargetObject.GetComponent<EnemyController>();
             if (enemy != null)
                 enemy.ToggleTargetVisibility (visibility);
         }

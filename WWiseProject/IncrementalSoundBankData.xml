@@ -4,7 +4,7 @@
 		<Banks>
 			<Language ID="0">
 				<File Name="Ambience" Hash="1035131898" Timestamp="131208443626381650"/>
-				<File Name="CharacterMovement" Hash="1692640579" Timestamp="131208473963887225"/>
+				<File Name="CharacterMovement" Hash="1223009439" Timestamp="131299838728435596"/>
 				<File Name="ForUnity" Hash="1653709822" Timestamp="131207624706678459"/>
 				<File Name="Init" Hash="1718699238" Timestamp="131208451669852265"/>
 				<File Name="Weapons" Hash="3118002193" Timestamp="131263433927906949"/>
@@ -12,7 +12,7 @@
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="874136390" Timestamp="131263433928427038"/>
+				<File Name="" Hash="2396230396" Timestamp="131299838728958223"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -20,7 +20,7 @@
 		<Banks>
 			<Language ID="0">
 				<File Name="Ambience" Hash="1035131898" Timestamp="131208443630957621"/>
-				<File Name="CharacterMovement" Hash="1605687964" Timestamp="131208473967266846"/>
+				<File Name="CharacterMovement" Hash="4096410485" Timestamp="131299838736594946"/>
 				<File Name="ForUnity" Hash="1653709822" Timestamp="131207624707423897"/>
 				<File Name="Init" Hash="4238449446" Timestamp="131208451672348418"/>
 				<File Name="Weapons" Hash="3118002193" Timestamp="131263433929726607"/>
@@ -28,7 +28,7 @@
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1935110643" Timestamp="131263433929877130"/>
+				<File Name="" Hash="3524085561" Timestamp="131299838736769802"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

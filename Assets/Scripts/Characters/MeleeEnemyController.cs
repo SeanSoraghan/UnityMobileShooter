@@ -14,6 +14,7 @@ public class MeleeEnemyController : ActorController
     public float      MovementSoundLength      = 16.5f;
     public float      NearbyEnemySpeedIncrease = 2.0f;
     public GameObject PlayerObject;
+    public GameObject Target;
 
     public static string EnemyTag = "Enemy";
 
@@ -106,6 +107,12 @@ public class MeleeEnemyController : ActorController
     {
         if (! EnemyContactIDs.Contains(gameObject.GetInstanceID()))
             EnemyContactIDs.Add (gameObject.GetInstanceID());
+    }
+
+    public void ToggleTargetVisibility (bool targetShouldBeVisible)
+    {
+        if (Target != null)
+            Target.gameObject.SetActive (targetShouldBeVisible);
     }
 }
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="118">
 	<RootPaths>
-		<ProjectRoot>D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\</ProjectRoot>
-		<SourceFilesRoot>D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Documents\Dev\UnityShowcase\MobileControl\MobileControl\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Documents\Dev\UnityShowcase\MobileControl\WWiseProject\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
