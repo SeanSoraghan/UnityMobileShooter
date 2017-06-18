@@ -5,7 +5,6 @@ using System.Collections;
 
 public class JoystickController : CanvasTouchHandler
 {
-    public float screenWidthToControlWidthRatio = 0.1667f;
     public float innerJoystickSizeRatio         = 0.5f;
     public Vector3 InputDirection { set; get; }
 

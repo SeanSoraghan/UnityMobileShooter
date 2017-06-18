@@ -1,32 +1,30 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
-public class ShootButtonController : CanvasTouchHandler
+public class ActionButtonController : CanvasTouchHandler
 {
-    public GameObject PlayerObject;
+    public PlayerController Player;
 
     Image buttonImage;
-    private PlayerController Player;
 
+	// Use this for initialization
 	void Start ()
     {
-	    buttonImage = GetComponent<Image>();
+		buttonImage = GetComponent<Image>();
 
         float rectSize = Screen.width * screenWidthToControlWidthRatio;
-        float y = GetComponent<RectTransform>().anchoredPosition.y;
+        float y = rectSize;
         float x = Screen.width - rectSize;
         GetComponent<RectTransform>().anchoredPosition = new Vector2 (x, y);
         GetComponent<RectTransform>().sizeDelta        = new Vector2 (rectSize, rectSize);
-
-        if (PlayerObject != null)
-            Player = PlayerObject.GetComponent<PlayerController>();
 	}
-
-    public override void HandleNewOrExistingTouch (Touch t)
+	
+	public override void HandleNewOrExistingTouch (Touch t)
     {
         if (Player != null)
-            Player.Shoot();
+            Player.Action();
     }
 
     public override void HandleTouchEnded (Touch t)
@@ -35,7 +33,7 @@ public class ShootButtonController : CanvasTouchHandler
     public override void HandleMouseDownEvent (Vector2 mousePosition)
     {
         if (Player != null)
-            Player.Shoot();
+            Player.Action();
     }
 
     public override void HandleMouseDragEvent (Vector2 mousePosition) { }

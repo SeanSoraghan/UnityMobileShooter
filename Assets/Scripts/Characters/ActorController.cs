@@ -14,6 +14,9 @@ public class AkCustomTrigger : AkTriggerBase
 public class AkMovementTrigger : AkCustomTrigger
 {}
 
+public class AkImpactTrigger : AkCustomTrigger
+{}
+
 public class ActorController : MonoBehaviour
 {
     public float        StartHealth           = 100.0f;
@@ -100,7 +103,7 @@ public class ActorController : MonoBehaviour
 
     private void ShowShotImpact (Vector3 position)
     {
-        AkCustomTrigger impactSound = GetComponent<AkCustomTrigger>();
+        AkImpactTrigger impactSound = GetComponent<AkImpactTrigger>();
         if (impactSound != null)
             impactSound.TriggerSound();
 

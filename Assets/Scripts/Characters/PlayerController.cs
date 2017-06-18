@@ -31,6 +31,7 @@ public struct PlayerTarget
 
 public class PlayerController : ActorController
 {
+    public delegate void PlayerAction();
     
     public GameObject           Joystick;
     public Transform            WeaponSlot;
@@ -40,6 +41,7 @@ public class PlayerController : ActorController
     public static string        AnimatorAimingParamString   = "Aiming";
     public static string        AnimatorCarryingParamString = "Carrying";
 
+    private PlayerAction        OnPlayerAction;
     private JoystickController  JoystickController;
     private Animator            AnimationController;
     private CharacterController Controller;
@@ -47,6 +49,7 @@ public class PlayerController : ActorController
     private string              LookMovementRotationDelta = "LookMovementRotationDelta";
     private string              VelocityMagnitude         = "VelocityMagnitude";
     private Quaternion          DefaultArmRotation        = Quaternion.identity;
+    private bool                CanTakeAction             = false;
 
 	void Start ()
     {
@@ -152,6 +155,19 @@ public class PlayerController : ActorController
             halfNegToHalfPos -= 360.0f;
 
         return halfNegToHalfPos / 180.0f;
+    }
+
+    public void SetActionEnabled(bool enabled) { CanTakeAction = enabled; }
+
+    public void SetPlayerActionCallback(PlayerAction cb)
+    {
+        OnPlayerAction = cb;
+    }
+
+    public void Action()
+    {
+        if (CanTakeAction)
+            OnPlayerAction();
     }
 
     public void Shoot ()

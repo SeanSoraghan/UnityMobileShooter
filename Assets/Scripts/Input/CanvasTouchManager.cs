@@ -14,6 +14,7 @@ enum MouseEventType
 
 public class CanvasTouchHandler : MonoBehaviour
 {
+    public static float screenWidthToControlWidthRatio = 0.1667f;
     public int touchID;
 
     public CanvasTouchHandler()
