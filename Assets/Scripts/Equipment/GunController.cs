@@ -24,6 +24,7 @@ public class GunController : MonoBehaviour
     public float         PickupAnimationBobHeight = 0.2f;
     public float         PickupAnimationBobSpeed  = 10.0f;
     public static string GunTag                   = "Gun";
+    public float         Knockback                = 1.0f;
 
     private float      LastShotTime            = 0.0f;
     private float      SecondsBetweenShots     = 1.0f;
@@ -95,17 +96,30 @@ public class GunController : MonoBehaviour
                     gunshotObject.transform.localPosition = Vector3.zero;
                     gunshotObject.transform.localScale    = Vector3.one;
                     gunshotObject.GetComponent<ParticleSystem>().Play();
-                    Destroy (gunshotObject, gunshotObject.GetComponent<ParticleSystem>().duration + 0.5f);
+                    Destroy (gunshotObject, gunshotObject.GetComponent<ParticleSystem>().main.duration + 0.5f);
                 }
 
                 GameObject objectHit = shootRaycastResult.collider.gameObject;
                 ActorController actor = ObjectUtils.GetActorControllerFromObject (objectHit);
 
                 if (actor != null)
-                    actor.TakeHit (shootRaycastResult.point, ShotDamage, new BulletInfo (shootRayDirection, 1.0f));
+                    actor.TakeHit (shootRaycastResult.point, ShotDamage, new BulletInfo (shootRayDirection * Knockback, 1.0f));
             }
             LastShotTime = Time.time;
         }
+    }
+
+    public bool TestLineOfSight (Vector3 TargetLocation)
+    {
+        Vector3 shootRayOrigin = GetShootOrigin();
+        Vector3 shootRayDirection = (TargetLocation - shootRayOrigin).normalized;
+        if (Physics.Raycast (shootRayOrigin, shootRayDirection, out shootRaycastResult))
+        {
+            const float eps = 5.0f;
+            if (Vector3.Distance (shootRaycastResult.point, TargetLocation) < eps)
+                return true;
+        }
+        return false;
     }
 
     public virtual Vector3 GetShootOrigin()

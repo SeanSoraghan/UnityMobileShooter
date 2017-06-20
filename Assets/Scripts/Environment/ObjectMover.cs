@@ -3,12 +3,19 @@ using System.Collections;
 
 public class ObjectMover : MonoBehaviour
 {
+    public enum MovementType
+    {
+        Linear = 0,
+        Exp,
+        Log
+    };
+
     public enum MoveTriggerType
     {
         Unknown     = 0,
         Environment = 1,
         Player      = 2
-    }
+    };
 
     public enum PositionState
     {
@@ -25,6 +32,7 @@ public class ObjectMover : MonoBehaviour
     private float           interpolationTime       = 0.0f;
     private PositionState   ObjectPositionState     = PositionState.Original;
     private MoveTriggerType LastMovementTriggerType = MoveTriggerType.Unknown;
+    private MovementType    ObjectMovementType      = MovementType.Exp;
 
 	void Start ()
     {
@@ -35,7 +43,12 @@ public class ObjectMover : MonoBehaviour
     {
 	    if (IsMoving)
         {
-            float t = interpolationTime * interpolationTime;
+            float t = interpolationTime;
+            if (ObjectMovementType == MovementType.Exp)
+                t *= interpolationTime;
+            else if (ObjectMovementType == MovementType.Log)
+                t = Mathf.Log10(interpolationTime * 9.0f + 1.0f);
+
             transform.position = Vector3.Lerp (StartPosition, EndPosition, t);
 
             interpolationTime += MovementSpeed;
@@ -83,7 +96,7 @@ public class ObjectMover : MonoBehaviour
     }
     public PositionState GetPositionState() { return ObjectPositionState; }
 
-    public virtual void TriggerMove(MoveTriggerType t)
+    public virtual void TriggerMove(MoveTriggerType t, MovementType m = MovementType.Exp)
     {
         if (TargetPosition != null)
         {
@@ -93,6 +106,7 @@ public class ObjectMover : MonoBehaviour
                 EndPosition   = TargetPosition.position;
                 IsMoving = true;
                 LastMovementTriggerType = t;
+                ObjectMovementType = m;
             }
         }
     }

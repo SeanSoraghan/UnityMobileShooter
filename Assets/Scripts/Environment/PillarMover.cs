@@ -7,7 +7,7 @@ public class PillarMover : ObjectMover
     public PillarMover VerticalNeighbour;
     public PillarMover DiagonalNeighbour;
 
-    public override void TriggerMove (MoveTriggerType t)
+    public override void TriggerMove (MoveTriggerType t, MovementType m = MovementType.Exp)
     {
         base.TriggerMove (t);
         if (DiagonalNeighbour != null)

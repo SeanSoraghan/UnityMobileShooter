@@ -5,6 +5,7 @@ using UnityEngine;
 public class TriggerPlayerObjectMoveInteraction : TriggerActionButtonEnabler
 {
     public ObjectMover      Object;
+    public ObjectMover.MovementType ObjectMovementType = ObjectMover.MovementType.Exp;
 
     protected override void UpdateActionButtonCallback(ref PlayerController p)
     {
@@ -15,6 +16,6 @@ public class TriggerPlayerObjectMoveInteraction : TriggerActionButtonEnabler
     private void TriggerObjectMove()
     {
         if (Object != null)
-            Object.TriggerMove(ObjectMover.MoveTriggerType.Player);
+            Object.TriggerMove(ObjectMover.MoveTriggerType.Player, ObjectMovementType);
     }
 }

@@ -24,7 +24,7 @@ public class MeleeAttackEnemyBehaviour : MeleeEnemyController
             Object attackEffect = Instantiate (AttackEffect, transform.position, transform.rotation);
             GameObject attackEffectObject = (GameObject) attackEffect;
             attackEffectObject.GetComponent<ParticleSystem>().Play();
-            float duration = attackEffectObject.GetComponent<ParticleSystem>().duration;
+            float duration = attackEffectObject.GetComponent<ParticleSystem>().main.duration;
             Destroy (attackEffectObject, duration + 0.5f);
         }
     }

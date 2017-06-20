@@ -29,6 +29,7 @@ public class ActorController : MonoBehaviour
     public GameObject   Gun;
     public Transform    TargetPosition;
     public bool         IsAlive               = true;
+    public bool         ShouldTestLineOfSight = false;
     public float        StaggerResistance     = 5.0f;
     public SpawnerActor ParentSpawner;
 
@@ -81,8 +82,16 @@ public class ActorController : MonoBehaviour
 
     public void Shoot (Vector3 targetLocation)
     {
+        if (!ShouldTestLineOfSight || (ShouldTestLineOfSight && TestLineOfSight(targetLocation)))
+            if (GunComponent != null)
+                GunComponent.Shoot (targetLocation);
+    }
+
+    public bool TestLineOfSight (Vector3 targetLocation)
+    {
         if (GunComponent != null)
-            GunComponent.Shoot (targetLocation);
+            return GunComponent.TestLineOfSight (targetLocation);
+        return false;
     }
 
     public virtual void TakeHit (Vector3 hitLocation, float damage, BulletInfo bulletInfo)

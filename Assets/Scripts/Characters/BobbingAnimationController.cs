@@ -9,7 +9,10 @@ public class BobbingAnimationController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-	
+	    BobbingSpeed  = Random.Range(3.0f, 6.0f);
+        BobbingHeight = Random.Range(2.0f, 6.0f);
+        Vector3 positionPertubation = new Vector3(Random.Range(-2.0f, 2.0f), Random.Range(-2.0f, 2.0f), Random.Range(-2.0f, 2.0f));
+        gameObject.transform.position += positionPertubation;
 	}
 	
 	// Update is called once per frame
