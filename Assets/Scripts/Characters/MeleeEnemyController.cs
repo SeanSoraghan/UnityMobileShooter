@@ -112,7 +112,12 @@ public class MeleeEnemyController : ActorController
     public void ToggleTargetVisibility (bool targetShouldBeVisible)
     {
         if (Target != null)
+        { 
             Target.gameObject.SetActive (targetShouldBeVisible);
+            // hard-coded always-on-ground
+            Vector3 p = Target.transform.position;
+            Target.transform.position = new Vector3(p.x, 0.5f, p.z);
+        }
     }
 }
 

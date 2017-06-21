@@ -16,7 +16,7 @@ public class MobileCanvasManager : CanvasTouchManager {
     private RaycastHit raycastResult;
 
     public override void HandleMouseDownEvent (Vector2 mousePosition) { UpdatePlayerTargetFromScreenInputPosition (Input.mousePosition); }
-    public override void HandleMouseDragEvent (Vector2 mousePosition) { UpdatePlayerTargetFromScreenInputPosition (Input.mousePosition); }
+    public override void HandleMouseDragEvent (Vector2 mousePosition) {  }
 
     public override void HandleNewOrExistingTouch (Touch t)
     {
